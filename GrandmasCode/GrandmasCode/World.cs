@@ -9,7 +9,7 @@ namespace GrandmasCode
     class World
     {
         private static World instance;
-        private List<Room> rooms;
+        //private List<Room> rooms;
         private int hungerLvl;
         private int healthLvl;
         private int entertainmentLvl;
@@ -24,6 +24,13 @@ namespace GrandmasCode
         {
             // Do nothing
             this.timer = 0;
+            this.modifier = new Threshold(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0);
+            this.hungerLvl = 60;
+            this.healthLvl = 60;
+            this.entertainmentLvl = 60;
+            this.confortLvl = 60;
+            this.medsLvl = 60;
+            this.faithLvl = 60;
         }
 
         public static World getInstance()
@@ -35,10 +42,8 @@ namespace GrandmasCode
             return instance;
         }
 
-        public static void update()
+        public void update()
         {
-            getInstance();
-
             // Update things
             instance.hungerLvl--;
             instance.healthLvl--;
@@ -54,46 +59,49 @@ namespace GrandmasCode
             }
         }
 
-        public static bool isNight()
+        public bool isNight()
         {
-            getInstance();
             return instance.timer > 72000 && instance.timer < 25200;
         }
 
         public int getHungerLvl()
         {
-            getInstance();
-            return this.hungerLvl;
+            return instance.hungerLvl;
         }
 
         public int getHealthLvl()
         {
-            getInstance();
-            return this.healthLvl;
+            return instance.healthLvl;
         }
 
         public int getEntertainmentLvl()
         {
-            getInstance();
-            return this.entertainmentLvl;
+            return instance.entertainmentLvl;
         }
 
         public int getConfortLvl()
         {
-            getInstance();
-            return this.confortLvl;
+            return instance.confortLvl;
         }
 
         public int getMedsLvl()
         {
-            getInstance();
-            return this.medsLvl;
+            return instance.medsLvl;
         }
 
         public int getFaithLvl()
         {
-            getInstance();
-            return this.faithLvl;
+            return instance.faithLvl;
+        }
+
+        public Threshold getModifier()
+        {
+            return instance.modifier;
+        }
+
+        public void setModifier(Threshold threshold)
+        {
+            instance.modifier = threshold;
         }
     }
 }
