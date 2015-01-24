@@ -29,6 +29,8 @@ namespace GrandmasCode
 
         void _State.execute(NPC character)
         {
+            Console.Write(character.name + " is in the Den");
+
             World.getInstance().incrementComfort();
             if (World.getInstance().isNight())
             {

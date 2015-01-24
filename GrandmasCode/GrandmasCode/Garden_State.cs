@@ -24,20 +24,21 @@ namespace GrandmasCode
 
         void _State.enter(NPC character)
         {
-            Console.Write(character.name + "is in the Garden");
+            Console.Write(character.name + "enters the Garden");
         }
 
-        void _State.execute(NPC chararcter)
+        void _State.execute(NPC character)
         {
+            Console.Write(character.name + "enters the Garden");
 
-            while (true)
+            World.getInstance().incrementEntertainment();
+            if (World.getInstance().isNight())
             {
-                break;
+                character.ChangeState(Sleep_State.getInstance());
             }
-
-            if (false)
+            else if (World.getInstance().getEntertainmentLvl() > character.thresholds.getHiEntertainment() + World.getInstance().getModifier().getHiEntertainment())
             {
-                //chararcter.ChangeState(Measure_State.getInstance());
+                character.ChangeState(Decision_State.getInstance());
             }
         }
 

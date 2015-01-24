@@ -31,7 +31,14 @@ namespace GrandmasCode
         {
             // BasicPath.move(room)
             Console.Write(character.name + ": there's nothing to do in here!  im playin shuffleboard");
-            character.ChangeState(Garden_State.getInstance());
+            if (World.getInstance().isNight())
+            {
+                character.ChangeState(Sleep_State.getInstance());
+            }
+            else
+            {
+                character.ChangeState(Garden_State.getInstance());
+            }
         }
 
         void _State.exit(NPC character)
