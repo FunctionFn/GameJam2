@@ -46,7 +46,7 @@
     <Compile Include="GoToKitchen_State.cs" />
     <Compile Include="Infirmary_State.cs" />
     <Compile Include="Kitchen_State.cs" />
-    <Compile Include="Measure_State.cs" />
+    <Compile Include="Decision_State.cs" />
     <Compile Include="NPC.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

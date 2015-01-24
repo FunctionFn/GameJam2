@@ -4,13 +4,37 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
+
+/* 
+ *  THE HOLY FORMULA IS AS FOLLOWS:
+ *  CHARACTER STATE PLUS MODIFIER
+ *  SUBTRACTED FROM THE WORLD STATE
+ *  SORTED IN ASCENDING ORDER:
+ *  WORLD VALUE - (CHARACTER VALUE + MOD)
+ *  
+ */
+
 namespace GrandmasCode
 {
-    class Measure_State: _State
+    class Decision_State: _State
     {
+
+        private Decision_State()
+        {
+        }
+
+        public static _State getInstance()
+        {
+            if (instance == null)
+            {
+                instance = new Decision_State();
+            }
+
+            return instance;
+        }
         void _State.enter(NPC character)
         {
-            Console.Write("Entering measure state.");
+            Console.WriteLine("Entering decision state.");
         }
 
         void _State.execute(NPC character)
@@ -22,7 +46,10 @@ namespace GrandmasCode
              * on levels.
              */
 
+            int[] decisionArray = new int[6];
+
             // initialize values that are relevant to decision-making
+
             int currentHunger;
             int currentHealth;
             int currentEntertainment;
@@ -30,14 +57,20 @@ namespace GrandmasCode
             int currentMeds;
             int currentFaith;
 
+
             // calculate relevant values for decision-making
-            currentHunger = character.thresholds.getLowHunger(); // add world, subtract announcement
-            currentHealth = character.thresholds.getLowHealth(); // for all
+            currentHunger = character.thresholds.getLowHunger(); // add world, add announcement
+            currentHealth = character.thresholds.getLowHealth(); // modifier for relevant 
             currentEntertainment = character.thresholds.getLowEntertainment();
             currentComfort = character.thresholds.getLowComfort();
             currentMeds = character.thresholds.getLowMeds();
             currentFaith = character.thresholds.getLowFaith();
           
+            // Add player choice
+
+            // subtract currentState from worldState
+            
+            // put into a priority queue 
 
             // decisionArray.add(currentHunger)
             // decisionArray.add(currentHealth) 
@@ -50,8 +83,12 @@ namespace GrandmasCode
 
         void _State.exit(NPC character)
         {
-            Console.Write("Exiting measure state.");
+            Console.WriteLine("Exiting decision state.");
         }
+
+
+        //-------------------------------------------
+        private static _State instance;
 
     }
 }
