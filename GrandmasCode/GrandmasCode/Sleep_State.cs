@@ -24,21 +24,21 @@ namespace GrandmasCode
             // Do nothing
         }
 
-        void enter(NPC character)
+        void _State.enter(NPC character)
         {
             Console.WriteLine(character.name + " enters Sleep state");
         }
 
-        void execute(NPC character)
+        void _State.execute(NPC character)
         {
             Console.WriteLine(character.name + " executes Sleep state");
-            if (World.isNight())
+            if (World.getInstance().isNight())
             {
                 //character.ChangeState(WDWDN_State.getInstance());
             }
         }
 
-        void exit(NPC character)
+        void _State.exit(NPC character)
         {
             Console.WriteLine(character.name + " exits Sleep state");
         }

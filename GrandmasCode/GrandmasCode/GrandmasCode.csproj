@@ -51,6 +51,7 @@
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Room.cs" />
+    <Compile Include="Sleep_State.cs" />
     <Compile Include="Threshold.cs" />
     <Compile Include="World.cs" />
     <Compile Include="_State.cs" />
