@@ -10,11 +10,11 @@ namespace GrandmasCode
     {
         static void Main(string[] args)
         {
-            _State myState = new Measure_State();
+            //_State myState = new Decision_State().get;
 
-            NPC joe = new NPC("joe");
+            //NPC joe = new NPC("joe");
 
-            joe.ChangeState(myState);
+            //joe.ChangeState(myState);
         }
     }
 }

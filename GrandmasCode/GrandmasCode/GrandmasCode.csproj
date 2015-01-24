@@ -59,6 +59,7 @@
     <Compile Include="Room.cs" />
     <Compile Include="Sleep_State.cs" />
     <Compile Include="Threshold.cs" />
+    <Compile Include="WDWDN_State.cs" />
     <Compile Include="World.cs" />
     <Compile Include="_State.cs" />
   </ItemGroup>
