@@ -1,0 +1,79 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="GrandmasCode._State">
+    <Position X="3.5" Y="0.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAEAAAAAAAAAAAABAAAACAAAAA=</HashCode>
+      <FileName>_State.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="GrandmasCode.NPC">
+    <Position X="1" Y="2.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQgQAAAAAAAhAAAAAAAAAAAAAAEAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>NPC.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Field Name="thresholds" />
+      <Field Name="curr_state" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="GrandmasCode.Room">
+    <Position X="8" Y="1" Width="1.5" />
+    <Compartments>
+      <Compartment Name="Methods" Collapsed="true" />
+    </Compartments>
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAQAAAAAAAIAAAAAAAAAAAABBAAAAAAAAAA=</HashCode>
+      <FileName>Room.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="GrandmasCode.Threshold">
+    <Position X="3.5" Y="3.75" Width="1.5" />
+    <Compartments>
+      <Compartment Name="Fields" Collapsed="true" />
+      <Compartment Name="Methods" Collapsed="true" />
+    </Compartments>
+    <TypeIdentifier>
+      <HashCode>ABQAABQAAAAIBAAACCQAIaEAKAJAgEAAACABQAAAAAA=</HashCode>
+      <FileName>Threshold.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="GrandmasCode.World">
+    <Position X="6.5" Y="3.75" Width="1.5" />
+    <Compartments>
+      <Compartment Name="Methods" Collapsed="true" />
+    </Compartments>
+    <TypeIdentifier>
+      <HashCode>AAAAAAIIACAAAAAAAEKAACAAAABCAAwIAAAAAAQEAIQ=</HashCode>
+      <FileName>World.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Field Name="rooms" />
+      <Field Name="modifier" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="System.Collections.Generic.List&lt;T&gt;">
+    <Position X="9.75" Y="4.25" Width="1.5" />
+    <Compartments>
+      <Compartment Name="Properties" Collapsed="true" />
+      <Compartment Name="Methods" Collapsed="true" />
+    </Compartments>
+    <NestedTypes>
+      <Struct Name="System.Collections.Generic.List&lt;T&gt;.Enumerator" Collapsed="true">
+        <TypeIdentifier />
+        <Lollipop Position="0.2" />
+      </Struct>
+    </NestedTypes>
+    <TypeIdentifier />
+    <Lollipop Position="0.2" />
+  </Class>
+  <Enum Name="GrandmasCode.Constants" Collapsed="true">
+    <Position X="12" Y="2" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAgAAAAAAAAAAAA=</HashCode>
+      <FileName>Constants.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>
