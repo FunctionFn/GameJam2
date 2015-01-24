@@ -6,19 +6,16 @@ using System.Threading.Tasks;
 
 namespace GrandmasCode
 {
-    class _State
+    interface _State
     {
-        public void enter()
-        {
-        }
+        void enter();
+        
 
-        public void execute()
-        {
-        }
+        void execute();
 
-        public void exit()
-        {
-        }
+
+        void exit();
+        
 
 
     }
