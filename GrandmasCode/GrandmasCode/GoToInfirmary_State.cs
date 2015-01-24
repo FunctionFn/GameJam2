@@ -6,17 +6,17 @@ using System.Threading.Tasks;
 
 namespace GrandmasCode
 {
-    class GoToKitchen_State: _State
+    class GoToInfirmary_State : _State
     {
-        private GoToKitchen_State()
+        private GoToInfirmary_State()
         {
         }
 
-        public _State getInstance()
+        public static _State getInstance()
         {
             if (instance == null)
             {
-                instance = new GoToKitchen_State();
+                instance = new GoToInfirmary_State();
             }
 
             return instance;
@@ -24,17 +24,19 @@ namespace GrandmasCode
 
         void _State.enter(NPC character)
         {
-            Console.Write(character.name + "entering goto state");
+            Console.Write(character.name + "is going to the infirmary");
         }
 
         void _State.execute(NPC chararcter)
         {
-            
+            // BasicPath.move(room)
+
+            chararcter.ChangeState(Infirmary_State.getInstance());
         }
 
         void _State.exit(NPC character)
         {
-            Console.Write(character.name + "exiting goto state");
+            Console.Write(character.name + "is arriving in the infirmary");
         }
 
         //-------------------------------------------

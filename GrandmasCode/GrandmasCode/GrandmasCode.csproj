@@ -42,7 +42,10 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Constants.cs" />
-    <Compile Include="GoTo_State.cs" />
+    <Compile Include="GoToInfirmary_State.cs" />
+    <Compile Include="GoToKitchen_State.cs" />
+    <Compile Include="Infirmary_State.cs" />
+    <Compile Include="Kitchen_State.cs" />
     <Compile Include="Measure_State.cs" />
     <Compile Include="NPC.cs" />
     <Compile Include="Program.cs" />
