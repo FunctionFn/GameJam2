@@ -35,7 +35,7 @@ namespace GrandmasCode
             return instance;
         }
 
-
+        public static void update()
         {
             getInstance();
 
