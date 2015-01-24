@@ -30,7 +30,7 @@ namespace GrandmasCode
         void _State.execute(NPC character)
         {
             // BasicPath.move(room)
-            Console.Write(character.name + ": chilly in here!  im gonna turn up the thermostat");
+            Console.Write(character.name + ": there's nothing to do in here!  im playin shuffleboard");
             character.ChangeState(Garden_State.getInstance());
         }
 

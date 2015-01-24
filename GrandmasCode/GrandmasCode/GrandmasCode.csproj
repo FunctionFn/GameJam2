@@ -42,14 +42,20 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Constants.cs" />
+    <Compile Include="Den_State.cs" />
+    <Compile Include="Garden_State.cs" />
+    <Compile Include="GoToDen_State.cs" />
+    <Compile Include="GoToGarden_State.cs" />
     <Compile Include="GoToInfirmary_State.cs" />
     <Compile Include="GoToKitchen_State.cs" />
+    <Compile Include="GoToPT_State.cs" />
     <Compile Include="Infirmary_State.cs" />
     <Compile Include="Kitchen_State.cs" />
     <Compile Include="Measure_State.cs" />
     <Compile Include="NPC.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="PT_State.cs" />
     <Compile Include="Room.cs" />
     <Compile Include="Sleep_State.cs" />
     <Compile Include="Threshold.cs" />
