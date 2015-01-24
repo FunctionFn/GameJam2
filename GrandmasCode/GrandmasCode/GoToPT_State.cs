@@ -6,9 +6,9 @@ using System.Threading.Tasks;
 
 namespace GrandmasCode
 {
-    class GoToInfirmary_State : _State
+    class GoToPT_State : _State
     {
-        private GoToInfirmary_State()
+        private GoToPT_State()
         {
         }
 
@@ -16,7 +16,7 @@ namespace GrandmasCode
         {
             if (instance == null)
             {
-                instance = new GoToInfirmary_State();
+                instance = new GoToPT_State();
             }
 
             return instance;
@@ -24,19 +24,19 @@ namespace GrandmasCode
 
         void _State.enter(NPC character)
         {
-            Console.Write(character.name + "is going to the infirmary");
+            Console.Write(character.name + "is going to the Den");
         }
 
         void _State.execute(NPC character)
         {
             // BasicPath.move(room)
-            Console.Write(character.name + ": on ma way to take ma meds!");
-            character.ChangeState(Infirmary_State.getInstance());
+            Console.Write(character.name + ": i feel stiff as a board.  but i hate my physical therapy");
+            character.ChangeState(PT_State.getInstance());
         }
 
         void _State.exit(NPC character)
         {
-            Console.Write(character.name + "is arriving in the infirmary");
+            Console.Write(character.name + "is arriving in the Den");
         }
 
         //-------------------------------------------

@@ -51,6 +51,7 @@ namespace GrandmasCode
             instance.confortLvl--;
             instance.medsLvl--;
             instance.faithLvl--;
+            // Must stop at zero
 
             instance.timer++;
             if (instance.timer == 86400)
@@ -61,7 +62,7 @@ namespace GrandmasCode
 
         public bool isNight()
         {
-            return instance.timer > 72000 && instance.timer < 25200;
+            return instance.timer > 72000 || instance.timer < 25200;
         }
 
         public int getHungerLvl()

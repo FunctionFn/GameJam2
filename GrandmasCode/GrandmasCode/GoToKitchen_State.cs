@@ -27,11 +27,11 @@ namespace GrandmasCode
             Console.Write(character.name + "is going to the Kitchen");
         }
 
-        void _State.execute(NPC chararcter)
+        void _State.execute(NPC character)
         {
             // BasicPath.move(room)
-
-            chararcter.ChangeState(Kitchen_State.getInstance());
+            Console.Write(character.name + ": the food here tastes like cardboard");
+            character.ChangeState(Kitchen_State.getInstance());
         }
 
         void _State.exit(NPC character)
@@ -41,7 +41,6 @@ namespace GrandmasCode
 
         //-------------------------------------------
         private static _State instance;
-
 
     }
 }
