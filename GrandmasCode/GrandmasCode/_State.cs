@@ -8,13 +8,13 @@ namespace GrandmasCode
 {
     interface _State
     {
-        void enter();
+        void enter(NPC character);
         
 
-        void execute();
+        void execute(NPC character);
 
 
-        void exit();
+        void exit(NPC character);
         
 
 
