@@ -29,7 +29,10 @@ namespace GrandmasCode
 
         public void ChangeState(_State newState)
         {
+            this.curr_state.exit(this);
             this.curr_state = newState;
+            this.curr_state.enter(this);
+
         }
 
         //----------------
