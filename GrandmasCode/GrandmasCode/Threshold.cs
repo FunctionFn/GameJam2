@@ -12,7 +12,7 @@ namespace GrandmasCode
          * Hunger
          * Health
          * Entertainment
-         * Confort
+         * Comfort
          * Meds
          * Faith
          */
@@ -23,8 +23,8 @@ namespace GrandmasCode
         private int hiHealth;
         private int lowEntertainment;
         private int hiEntertainment;
-        private int lowConfort;
-        private int hiConfort;
+        private int lowComfort;
+        private int hiComfort;
         private int lowMeds;
         private int hiMeds;
         private int lowFaith;
@@ -36,8 +36,8 @@ namespace GrandmasCode
                          int hiHealth,
                          int lowEntertainment,
                          int hiEntertainment,
-                         int lowConfort,
-                         int hiConfort,
+                         int lowComfort,
+                         int hiComfort,
                          int lowMeds,
                          int hiMeds,
                          int lowFaith,
@@ -50,8 +50,8 @@ namespace GrandmasCode
             this.hiHealth = hiHealth;
             this.lowEntertainment = lowEntertainment;
             this.hiEntertainment = hiEntertainment;
-            this.lowConfort = lowConfort;
-            this.hiConfort = hiConfort;
+            this.lowComfort = lowComfort;
+            this.hiComfort = hiComfort;
             this.lowMeds = lowMeds;
             this.hiMeds = hiMeds;
             this.lowFaith = lowFaith;
@@ -64,8 +64,8 @@ namespace GrandmasCode
                          int hiHealth,
                          int lowEntertainment,
                          int hiEntertainment,
-                         int lowConfort,
-                         int hiConfort,
+                         int lowComfort,
+                         int hiComfort,
                          int lowMeds,
                          int hiMeds,
                          int lowFaith,
@@ -78,8 +78,8 @@ namespace GrandmasCode
             this.hiHealth = hiHealth;
             this.lowEntertainment = lowEntertainment;
             this.hiEntertainment = hiEntertainment;
-            this.lowConfort = lowConfort;
-            this.hiConfort = hiConfort;
+            this.lowComfort = lowComfort;
+            this.hiComfort = hiComfort;
             this.lowMeds = lowMeds;
             this.hiMeds = hiMeds;
             this.lowFaith = lowFaith;
@@ -116,14 +116,14 @@ namespace GrandmasCode
             return this.hiEntertainment;
         }
 
-        public int getLowConfort()
+        public int getLowComfort()
         {
-            return this.lowConfort;
+            return this.lowComfort;
         }
 
-        public int getHiConfort()
+        public int getHiComfort()
         {
-            return this.hiConfort;
+            return this.hiComfort;
         }
 
         public int getLowMeds()

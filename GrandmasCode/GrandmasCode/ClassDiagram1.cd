@@ -7,8 +7,8 @@
       <FileName>NPC.cs</FileName>
     </TypeIdentifier>
     <ShowAsAssociation>
-      <Field Name="thresholds" />
       <Field Name="curr_state" />
+      <Field Name="thresholds" />
     </ShowAsAssociation>
   </Class>
   <Class Name="GrandmasCode.Room">
@@ -22,7 +22,7 @@
     </TypeIdentifier>
   </Class>
   <Class Name="GrandmasCode.Threshold">
-    <Position X="3.5" Y="3.75" Width="1.5" />
+    <Position X="4.25" Y="3.25" Width="1.5" />
     <Compartments>
       <Compartment Name="Fields" Collapsed="true" />
       <Compartment Name="Methods" Collapsed="true" />
@@ -62,7 +62,7 @@
     <Lollipop Position="0.2" />
   </Class>
   <Interface Name="GrandmasCode._State" Collapsed="true">
-    <Position X="4.5" Y="2.75" Width="1.5" />
+    <Position X="3.5" Y="1.25" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAAEAAAAAAAAAAAABAAAACAAAAA=</HashCode>
       <FileName>_State.cs</FileName>
