@@ -24,7 +24,7 @@ namespace GrandmasCode
 
         void _State.enter(NPC character)
         {
-            Console.Write(character.name + "is going to the Den");
+            Console.Write(character.name + "is going to the physical therapy");
         }
 
         void _State.execute(NPC character)
@@ -36,7 +36,7 @@ namespace GrandmasCode
 
         void _State.exit(NPC character)
         {
-            Console.Write(character.name + "is arriving in the Den");
+            Console.Write(character.name + "is arriving in the physical therapy");
         }
 
         //-------------------------------------------
