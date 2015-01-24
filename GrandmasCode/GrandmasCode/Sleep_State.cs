@@ -10,7 +10,7 @@ namespace GrandmasCode
     {
         private static _State instance;
 
-        public _State getInstance()
+        public static _State getInstance()
         {
             if (instance == null)
             {
@@ -32,9 +32,9 @@ namespace GrandmasCode
         void _State.execute(NPC character)
         {
             Console.WriteLine(character.name + " executes Sleep state");
-            if (World.getInstance().isNight())
+            if (!World.getInstance().isNight())
             {
-                //character.ChangeState(WDWDN_State.getInstance());
+                character.ChangeState(WDWDN_State.getInstance());
             }
         }
 

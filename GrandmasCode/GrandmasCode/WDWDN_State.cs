@@ -10,7 +10,7 @@ namespace GrandmasCode
     {
         private static _State instance;
 
-        public _State getInstance()
+        public static _State getInstance()
         {
             if (instance == null)
             {
@@ -37,7 +37,7 @@ namespace GrandmasCode
 
         void _State.exit(NPC character)
         {
-            Console.WriteLine(character.name + " exits Sleep state");
+            Console.WriteLine(character.name + " exits WDWDN state");
         }
     }
 }

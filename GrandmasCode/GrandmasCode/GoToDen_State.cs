@@ -31,7 +31,14 @@ namespace GrandmasCode
         {
             // BasicPath.move(room)
             Console.Write(character.name + ": chilly in here!  im gonna turn up the thermostat");
-            character.ChangeState(Den_State.getInstance());
+            if (World.getInstance().isNight())
+            {
+                character.ChangeState(Sleep_State.getInstance());
+            }
+            else
+            {
+                character.ChangeState(Den_State.getInstance());
+            }
         }
 
         void _State.exit(NPC character)

@@ -24,20 +24,19 @@ namespace GrandmasCode
 
         void _State.enter(NPC character)
         {
-            Console.Write(character.name + "is in the Den");
+            Console.Write(character.name + "enters the Den");
         }
 
-        void _State.execute(NPC chararcter)
+        void _State.execute(NPC character)
         {
-
-            while (true)
+            World.getInstance().incrementComfort();
+            if (World.getInstance().isNight())
             {
-                break;
+                character.ChangeState(Sleep_State.getInstance());
             }
-
-            if (false)
+            else if (World.getInstance().getConfortLvl() > character.thresholds.getHiComfort() + World.getInstance().getModifier().getHiComfort())
             {
-                //chararcter.ChangeState(Measure_State.getInstance());
+                character.ChangeState(Decision_State.getInstance());
             }
         }
 

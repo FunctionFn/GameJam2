@@ -8,6 +8,7 @@ namespace GrandmasCode
 {
     class World
     {
+        private const int INCREMENT = 2;
         private static World instance;
         //private List<Room> rooms;
         private int hungerLvl;
@@ -103,6 +104,36 @@ namespace GrandmasCode
         public void setModifier(Threshold threshold)
         {
             instance.modifier = threshold;
+        }
+
+        public void incrementHunger()
+        {
+            instance.hungerLvl += INCREMENT;
+        }
+
+        public void incrementHealth()
+        {
+            instance.healthLvl += INCREMENT;
+        }
+
+        public void incrementEntertainment()
+        {
+            instance.entertainmentLvl += INCREMENT;
+        }
+
+        public void incrementComfort()
+        {
+            instance.confortLvl += INCREMENT;
+        }
+
+        public void incrementMeds()
+        {
+            instance.medsLvl += INCREMENT;
+        }
+
+        public void incrementFaith()
+        {
+            instance.faithLvl += INCREMENT;
         }
     }
 }
