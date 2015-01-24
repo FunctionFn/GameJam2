@@ -8,10 +8,6 @@ using System.Threading.Tasks;
 namespace GrandmasCode
 {
 
-    public enum Constants
-    {
-        STARTING_VIT = 70
-    }
 
     class NPC
     {
@@ -21,7 +17,7 @@ namespace GrandmasCode
             this.name = inName;
             this.vit = (int)Constants.STARTING_VIT;
             this.curr_state = null;
-            //this.thresholds = null;
+            this.thresholds = null;
         }
 
 
@@ -39,7 +35,7 @@ namespace GrandmasCode
         //----------------
         public string name;
         public _State curr_state;
-        // public Threshold tresholds;
+        public Threshold thresholds;
         public int vit;
 
 
