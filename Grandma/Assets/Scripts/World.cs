@@ -19,8 +19,7 @@
         // Timer, should be fixed later on
         private int timer;
         private Threshold modifier;
-        private System.Random random;
-
+		private int elderlyLeft;
         private World()
         {
             // Do nothing
@@ -32,7 +31,7 @@
             this.comfortLvl = 60;
             this.medsLvl = 60;
             this.faithLvl = 60;
-            this.random = new System.Random(14);
+			this.elderlyLeft = Constants.POPULATION;
         }
 
         public static World getInstance()
@@ -88,7 +87,7 @@
 
         public bool isNight()
         {
-		    return false;
+		return false;
             return instance.timer > 72000 || instance.timer < 10;
         }
 
@@ -107,7 +106,7 @@
             return instance.entertainmentLvl;
         }
 
-        public int getcomfortLvl()
+        public int getComfortLvl()
         {
             return instance.comfortLvl;
         }
@@ -121,6 +120,11 @@
         {
             return instance.faithLvl;
         }
+
+		public int getElderlyLeft()
+		{
+			return instance.elderlyLeft;
+		}
 
         public Threshold getModifier()
         {
@@ -186,10 +190,10 @@
             }
         }
 
-        public double getRandom()
-        {
-            return this.random.NextDouble();
-        }
+		public void reportDeath() 
+		{
+			instance.elderlyLeft--;
+		}
 		
 		public Conditions getLeast()
 		{
