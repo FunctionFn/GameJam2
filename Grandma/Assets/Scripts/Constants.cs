@@ -1,6 +1,6 @@
 ﻿public static class Constants
 {
-    public const int STARTING_VIT = 70;
+    public const int STARTING_VIT = 50;
     public const int POPULATION = 5;
     public const int KITCHEN_CAPACITY = 2;
     public const int GARDEN_CAPACITY = 2;

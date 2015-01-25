@@ -22,7 +22,7 @@ public class AnnounceControl : MonoBehaviour {
 
     public void AnnouncementManage()
     {
-        //button.active = false;
+        
     }
 
 }
