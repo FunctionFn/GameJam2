@@ -8,6 +8,51 @@
         this.curr_state = Sleep_State.getInstance();
         this.curr_room = BedroomRoom.getInstance();
         this.isWalking = false;
+        this.isTalking = false;
+    }
+
+    public NPC(
+        string inName,
+        string sayDecision,
+        string sayKitchen,
+        string sayGoToKitchen,
+        string sayPT,
+        string sayGoToPT,
+        string sayGarden,
+        string sayGoToGarden,
+        string sayDen,
+        string sayGoToDen,
+        string sayInfirmary,
+        string sayGoToInfirmary,
+        string saySleep,
+        string sayGoToSleep,
+        string sayReminisce,
+        string sayNap,
+        string sayWander
+        )
+    {
+        this.name = inName;
+        this.vit = (int)Constants.STARTING_VIT;
+        this.curr_state = Sleep_State.getInstance();
+        this.curr_room = BedroomRoom.getInstance();
+        this.isWalking = false;
+        this.isTalking = false;
+        this.sayDecision = sayDecision;
+        this.sayKitchen = sayKitchen;
+        this.sayGoToKitchen = sayGoToKitchen;
+        this.sayPT = sayPT;
+        this.sayGoToPT = sayGoToPT;
+        this.sayGarden = sayGarden;
+        this.sayGoToGarden = sayGoToGarden;
+        this.sayDen = sayDen;
+        this.sayGoToDen = sayGoToDen;
+        this.sayInfirmary = sayInfirmary;
+        this.sayGoToInfirmary = sayGoToInfirmary;
+        this.saySleep = saySleep;
+        this.sayGoToSleep = sayGoToSleep;
+        this.sayReminisce = sayReminisce;
+        this.sayNap = sayNap;
+        this.sayWander = sayWander;
     }
 
 
@@ -112,24 +157,24 @@
     public int vit;
     public bool isWalking;
     public bool isTalking;
-    public string curr_phrase;
+    public string curr_phrase = null;
 
-    public string sayDecision;
-    public string sayKitchen;
-    public string sayGoToKitchen;
-    public string sayPT;
-    public string sayGoToPT;
-    public string sayGarden;
-    public string sayGoToGarden;
-    public string sayDen;
-    public string sayGoToDen;
-    public string sayInfirmary;
-    public string sayGoToInfirmary;
-    public string saySleep;
-    public string sayGoToSleep;
-    public string sayReminisce;
-    public string sayNap;
-    public string sayWander;
+    public string sayDecision = null;
+    public string sayKitchen = null;
+    public string sayGoToKitchen = null;
+    public string sayPT = null;
+    public string sayGoToPT = null;
+    public string sayGarden = null;
+    public string sayGoToGarden = null;
+    public string sayDen = null;
+    public string sayGoToDen = null;
+    public string sayInfirmary = null;
+    public string sayGoToInfirmary = null;
+    public string saySleep = null;
+    public string sayGoToSleep = null;
+    public string sayReminisce = null;
+    public string sayNap = null;
+    public string sayWander = null;
 
 
 }
