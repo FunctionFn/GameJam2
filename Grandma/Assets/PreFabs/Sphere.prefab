@@ -76,7 +76,7 @@ MonoBehaviour:
   clinic: {fileID: 0}
   rec: {fileID: 0}
   behaviorState: 0
-  travelTime: 1
+  travelTime: 5
   neutralLoc: {x: 0, y: 0, z: 0}
   pathbn: []
   waitTime: .5
