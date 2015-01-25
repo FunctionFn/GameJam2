@@ -1,12 +1,5 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace GrandmasCode
-{
-    class World
+﻿
+    public class World
     {
         private const int INCREMENT = 2;
         private static World instance;
@@ -136,4 +129,3 @@ namespace GrandmasCode
             instance.faithLvl += INCREMENT;
         }
     }
-}

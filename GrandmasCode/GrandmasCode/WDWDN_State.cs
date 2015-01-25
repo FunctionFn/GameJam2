@@ -19,18 +19,18 @@ public class WDWDN_State : _State
 
     void _State.enter(NPC character)
     {
-        Console.WriteLine(character.name + " enters WDWDN state");
+        System.Console.WriteLine(character.name + " enters WDWDN state");
     }
 
     void _State.execute(NPC character)
     {
-        Console.WriteLine(character.name + " asks: \"What do WeakReference do now?\"");
+        System.Console.WriteLine(character.name + " asks: \"What do WeakReference do now?\"");
         character.ChangeState(Decision_State.getInstance());
     }
 
     void _State.exit(NPC character)
     {
-        Console.WriteLine(character.name + " exits WDWDN state");
+        System.Console.WriteLine(character.name + " exits WDWDN state");
     }
 }
 

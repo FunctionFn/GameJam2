@@ -1,12 +1,5 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace GrandmasCode
-{
-    class Threshold
+﻿
+    public class Threshold
     {
         /*
          * Hunger
@@ -146,4 +139,3 @@ namespace GrandmasCode
             return this.hiFaith;
         }
     }
-}

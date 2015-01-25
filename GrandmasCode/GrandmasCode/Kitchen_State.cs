@@ -17,12 +17,12 @@ public class Kitchen_State : _State
 
     void _State.enter(NPC character)
     {
-        Console.Write(character.name + " entering the kitchen");
+        System.Console.WriteLine(character.name + " entering the kitchen");
     }
 
     void _State.execute(NPC character)
     {
-        Console.Write(character.name + "is in the kitchen");
+        System.Console.WriteLine(character.name + "is in the kitchen");
         World.getInstance().incrementHunger();
         if (World.getInstance().isNight())
         {
@@ -36,7 +36,7 @@ public class Kitchen_State : _State
 
     void _State.exit(NPC character)
     {
-        Console.Write(character.name + " is done in the kitchen");
+        System.Console.WriteLine(character.name + " is done in the kitchen");
     }
 
     //-------------------------------------------

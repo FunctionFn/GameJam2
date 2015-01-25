@@ -1,12 +1,5 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace GrandmasCode
-{
-    interface _State
+﻿
+public interface _State
     {
         void enter(NPC character);
         
@@ -19,4 +12,4 @@ namespace GrandmasCode
 
 
     }
-}
+

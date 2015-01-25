@@ -18,12 +18,12 @@ public class Garden_State : _State
 
     void _State.enter(NPC character)
     {
-        Console.Write(character.name + "enters the Garden");
+        System.Console.WriteLine(character.name + "enters the Garden");
     }
 
     void _State.execute(NPC character)
     {
-        Console.Write(character.name + "enters the Garden");
+        System.Console.WriteLine(character.name + "enters the Garden");
 
         World.getInstance().incrementEntertainment();
         if (World.getInstance().isNight())
@@ -38,7 +38,7 @@ public class Garden_State : _State
 
     void _State.exit(NPC character)
     {
-        Console.Write(character.name + "is done in the Garden");
+        System.Console.WriteLine(character.name + "is done in the Garden");
     }
 
     //-------------------------------------------

@@ -20,12 +20,12 @@ public class Sleep_State : _State
 
     void _State.enter(NPC character)
     {
-        Console.WriteLine(character.name + " enters Sleep state");
+        System.Console.WriteLine(character.name + " enters Sleep state");
     }
 
     void _State.execute(NPC character)
     {
-        Console.WriteLine(character.name + " executes Sleep state");
+        System.Console.WriteLine(character.name + " executes Sleep state");
         if (!World.getInstance().isNight())
         {
             character.ChangeState(WDWDN_State.getInstance());
@@ -34,7 +34,7 @@ public class Sleep_State : _State
 
     void _State.exit(NPC character)
     {
-        Console.WriteLine(character.name + " exits Sleep state");
+        System.Console.WriteLine(character.name + " exits Sleep state");
     }
 }
 
