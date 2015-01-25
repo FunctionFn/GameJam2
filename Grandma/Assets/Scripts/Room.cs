@@ -1,33 +1,32 @@
-﻿public class Room
+﻿public abstract class Room
 {
-    private int capacity;
-    private int occupancy;
+    protected int capacity;
+    protected int occupancy;
 
     public Room(int capacity)
     {
         this.capacity = capacity;
     }
 
-    public bool enter()
+    public bool canEnter()
     {
-        bool returnValue = false;
-        if (this.occupancy < this.capacity)
-        {
-            this.occupancy++;
-            returnValue = true;
-        }
-        return returnValue;
+        return this.occupancy < this.capacity;
     }
 
-    public bool leave()
+    public bool canLeave()
     {
-        bool returnValue = false;
-        if (this.occupancy > 0)
-        {
-            this.occupancy--;
-            returnValue = true;
-        }
-        return returnValue;
+        return this.occupancy > 0;
+    }
+
+    public Room enter()
+    {
+        this.occupancy++;
+        return this;
+    }
+
+    public void leave()
+    {
+        this.occupancy--;
     }
 }
 

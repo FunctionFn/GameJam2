@@ -18,6 +18,7 @@ public class GoToPT_State : _State
     void _State.enter(NPC character)
     {
         System.Console.WriteLine(character.name + "is going to the physical therapy");
+        character.isWalking = true;
     }
 
     void _State.execute(NPC character)
@@ -28,9 +29,13 @@ public class GoToPT_State : _State
         {
             character.ChangeState(GoToSleep_State.getInstance());
         }
-        else
+        else if (!character.isWalking && PTRoom.getInstance().canEnter())
         {
             character.ChangeState(PT_State.getInstance());
+        }
+        else if (!character.isWalking && !PTRoom.getInstance().canEnter())
+        {
+            character.ChangeState(Decision_State.getInstance());
         }
     }
 

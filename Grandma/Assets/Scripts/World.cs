@@ -62,7 +62,7 @@
 
         public bool isNight()
         {
-			return false;
+		return false;
             return instance.timer > 72000 || instance.timer < 10;
         }
 

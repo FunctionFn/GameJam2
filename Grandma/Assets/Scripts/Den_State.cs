@@ -18,6 +18,8 @@ public class Den_State : _State
     void _State.enter(NPC character)
     {
         System.Console.WriteLine(character.name + "enters the Den");
+        character.curr_room.leave();
+        character.curr_room = DenRoom.getInstance().enter();
     }
 
     void _State.execute(NPC character)

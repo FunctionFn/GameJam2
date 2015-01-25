@@ -18,6 +18,8 @@ public class Infirmary_State : _State
     void _State.enter(NPC character)
     {
         System.Console.WriteLine(character.name + " entering the Infirmary");
+        character.curr_room.leave();
+        character.curr_room = InfirmaryRoom.getInstance().enter();
     }
 
     void _State.execute(NPC character)

@@ -18,6 +18,7 @@ public class GoToDen_State : _State
     void _State.enter(NPC character)
     {
         System.Console.WriteLine(character.name + "is going to the Den");
+        character.isWalking = true;
     }
 
     void _State.execute(NPC character)
@@ -28,9 +29,13 @@ public class GoToDen_State : _State
         {
             character.ChangeState(GoToSleep_State.getInstance());
         }
-        else
+        else if (!character.isWalking && DenRoom.getInstance().canEnter())
         {
             character.ChangeState(Den_State.getInstance());
+        }
+        else if (!character.isWalking && !DenRoom.getInstance().canEnter())
+        {
+            character.ChangeState(Decision_State.getInstance());
         }
     }
 

@@ -6,6 +6,8 @@
         this.name = inName;
         this.vit = (int)Constants.STARTING_VIT;
         this.curr_state = Sleep_State.getInstance();
+        this.curr_room = BedroomRoom.getInstance();
+        this.isWalking = false;
     }
 
 
@@ -23,11 +25,24 @@
 
     }
 
+    public bool ChangeRoom(Room newRoom)
+    {
+        bool canChange = newRoom.canEnter() && this.curr_room.canLeave();
+        if (canChange)
+        {
+            this.curr_room.leave();
+            this.curr_room = newRoom.enter();
+        }
+        return canChange;
+    }
+
     //----------------
     public string name;
     public _State curr_state;
+    public Room curr_room;
     public Threshold thresholds;
     public int vit;
+    public bool isWalking;
 
 }
 

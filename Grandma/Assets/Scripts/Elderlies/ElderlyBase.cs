@@ -19,7 +19,9 @@ public class ElderlyBase : MonoBehaviour {
 	public Vector3 neutralLoc;
 	public Vector3[] pathbn;
 
-	public float waitTime;
+	protected float waitTime;
+
+	public NPC npc;
 	/*
 	 * Behavior States:
 	 * 0: Neutral
@@ -34,7 +36,7 @@ public class ElderlyBase : MonoBehaviour {
 	
 	void Start () {
 
-		pathbn = new [] { bedroom.transform.position, neutralLoc};
+
 
 
 
@@ -43,9 +45,25 @@ public class ElderlyBase : MonoBehaviour {
 	}
 	
 	// Update is called once per frame
-	void Update () {
-
-
+	 void Update () {
+		npc.Update ();
+		if (npc.isWalking) {
+			if (npc.curr_state == GoToDen_State.getInstance ()) {
+				MoveTo(rec.transform.position);
+			}
+			else if(npc.curr_state == GoToGarden_State.getInstance()) {
+				MoveTo(garden.transform.position);
+			}
+			else if(npc.curr_state == GoToInfirmary_State.getInstance()){
+				MoveTo(hospital.transform.position);
+			}
+			else if(npc.curr_state == GoToKitchen_State.getInstance()){
+				MoveTo(kitchen.transform.position);
+			}
+			else if(npc.curr_state == GoToPT_State.getInstance()){
+				MoveTo(clinic.transform.position);
+			}
+		}
 		
 	}
 
@@ -59,15 +77,21 @@ public class ElderlyBase : MonoBehaviour {
 	{
 		iTween.MoveTo(gameObject, iTween.Hash ("position", target,
 		                                      "easetype", iTween.EaseType.linear,
-		                                      "time", travelTime));
+		                                      "time", travelTime,
 		                                      //"delay", waitTime
-		                                      //"oncomplete", "",
+		                                       "oncomplete", "OnStop"));
 		                                      //"oncompletetarget", gameObject
 
 
 	}
 
+	private void OnStop()
+	{
+		npc.isWalking = false;
+	}
 
+
+	//Obsolete/testing movement
 
 	void beginMovement()
 	{
