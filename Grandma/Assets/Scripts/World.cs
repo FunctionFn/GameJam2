@@ -19,7 +19,7 @@
         // Timer, should be fixed later on
         private int timer;
         private Threshold modifier;
-
+		private int elderlyLeft;
         private World()
         {
             // Do nothing
@@ -31,6 +31,7 @@
             this.comfortLvl = 60;
             this.medsLvl = 60;
             this.faithLvl = 60;
+			this.elderlyLeft = Constants.POPULATION;
         }
 
         public static World getInstance()
@@ -105,7 +106,7 @@
             return instance.entertainmentLvl;
         }
 
-        public int getcomfortLvl()
+        public int getComfortLvl()
         {
             return instance.comfortLvl;
         }
@@ -119,6 +120,11 @@
         {
             return instance.faithLvl;
         }
+
+		public int getElderlyLeft()
+		{
+			return instance.elderlyLeft;
+		}
 
         public Threshold getModifier()
         {
@@ -183,6 +189,11 @@
                 instance.faithLvl = 100;
             }
         }
+
+		public void reportDeath() 
+		{
+			instance.elderlyLeft--;
+		}
 		
 		public Conditions getLeast()
 		{
