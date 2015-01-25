@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: eb03c05309e332c478647a9d488ffca1
+MonoImporter:
+  serializedVersion: 2
+  defaultReferences:
+  - bedroom: {instanceID: 0}
+  - garden: {instanceID: 0}
+  - hospital: {instanceID: 0}
+  - kitchen: {instanceID: 0}
+  - clinic: {instanceID: 0}
+  - rec: {instanceID: 0}
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
