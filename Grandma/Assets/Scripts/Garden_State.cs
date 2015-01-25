@@ -19,6 +19,8 @@ public class Garden_State : _State
     void _State.enter(NPC character)
     {
         System.Console.WriteLine(character.name + "enters the Garden");
+        character.curr_room.leave();
+        character.curr_room = GardenRoom.getInstance().enter();
     }
 
     void _State.execute(NPC character)

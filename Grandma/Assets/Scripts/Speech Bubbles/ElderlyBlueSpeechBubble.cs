@@ -5,7 +5,7 @@ public class ElderlyBlueSpeechBubble : SpeechBubbleBase {
 	
 	private static ElderlyBlueSpeechBubble _inst;
 	public static ElderlyBlueSpeechBubble Inst { get { return _inst; } }
-	
+
 	void Awake()
 	{
 		
@@ -13,5 +13,6 @@ public class ElderlyBlueSpeechBubble : SpeechBubbleBase {
 		
 	}
 	
+
 	
 }

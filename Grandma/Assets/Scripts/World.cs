@@ -1,4 +1,10 @@
-﻿
+﻿public enum Conditions {
+	HUNGER,
+	HEALTH,
+	ENTERTAINMENT,
+	COMFORT,
+	MEDS
+};
     public class World
     {
         private const int INCREMENT = 2;
@@ -56,7 +62,7 @@
 
         public bool isNight()
         {
-			return false;
+		return false;
             return instance.timer > 72000 || instance.timer < 10;
         }
 
@@ -129,4 +135,48 @@
         {
             instance.faithLvl += INCREMENT;
         }
+		
+		public Conditions getLeast()
+		{
+		    int[] decisionArray = new int[5];
+			int min = int.MaxValue;
+			int lowIndex = 0;
+		
+			decisionArray[0] = instance.hungerLvl;
+			decisionArray[1] = instance.healthLvl;
+			decisionArray[2] = instance.entertainmentLvl;
+			decisionArray[3] = instance.confortLvl;
+			decisionArray[4] = instance.medsLvl;
+			
+			for (int i = 0; i <= 4; i++)
+			{
+				if (decisionArray[i] < min)
+				{
+					min = decisionArray[i];
+					lowIndex = i;
+				}
+			}
+
+			switch (lowIndex)
+			{
+				case 0:
+					return Conditions.HUNGER;
+
+				case 1:
+					return Conditions.HEALTH;
+
+				case 2:
+					return Conditions.ENTERTAINMENT;
+
+				case 3:
+					return Conditions.COMFORT;
+
+				default:
+					return Conditions.MEDS;
+			}
+			
     }
+
+
+}
+    

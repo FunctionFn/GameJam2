@@ -16,7 +16,8 @@
 
     void _State.enter(NPC character)
     {
-        System.Console.WriteLine(character.name + "is going to the Kitchen");
+        System.Console.WriteLine(character.name + " decided to go to the Kitchen");
+        character.isWalking = true;
     }
 
     void _State.execute(NPC character)
@@ -27,15 +28,19 @@
         {
             character.ChangeState(GoToSleep_State.getInstance());
         }
-        else
+        else if (!character.isWalking && KitchenRoom.getInstance().canEnter())
         {
             character.ChangeState(Kitchen_State.getInstance());
+        }
+        else if (!character.isWalking && !KitchenRoom.getInstance().canEnter())
+        {
+            character.ChangeState(Decision_State.getInstance());
         }
     }
 
     void _State.exit(NPC character)
     {
-        System.Console.WriteLine(character.name + "is arriving in the kitchen");
+        System.Console.WriteLine(character.name + " is arriving in the kitchen");
     }
 
     //-------------------------------------------

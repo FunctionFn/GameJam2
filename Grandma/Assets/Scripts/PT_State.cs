@@ -18,6 +18,8 @@ public class PT_State : _State
     void _State.enter(NPC character)
     {
         System.Console.WriteLine(character.name + " is entering the Physical Therapy Room");
+        character.curr_room.leave();
+        character.curr_room = PTRoom.getInstance().enter();
     }
 
     void _State.execute(NPC character)
