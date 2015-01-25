@@ -57,6 +57,9 @@ namespace GrandmasCode
             int currentMeds;
             int currentFaith;
 
+            int min = int.MaxValue;
+            int lowIndex = 0;
+
 
             // calculate relevant values for decision-making
             currentHunger = character.thresholds.getLowHunger(); // add world, add announcement
@@ -65,20 +68,46 @@ namespace GrandmasCode
             currentComfort = character.thresholds.getLowComfort();
             currentMeds = character.thresholds.getLowMeds();
             currentFaith = character.thresholds.getLowFaith();
-          
+
+            decisionArray[0] = currentHunger;
+            decisionArray[1] = currentHealth;
+            decisionArray[2] = currentEntertainment;
+            decisionArray[3] = currentComfort;
+            decisionArray[4] = currentMeds;
+            decisionArray[5] = currentFaith; //faith is left out right now?
+
             // Add player choice
+            // subtract from this
 
-            // subtract currentState from worldState
-            
-            // put into a priority queue 
+            //Find priority movement 
+            for (int i = 0; i < 4; i++)
+            {
+                if (decisionArray[i] < min)
+                {
+                    min = decisionArray[i];
+                    lowIndex = i;
+                }
+            }
 
-            // decisionArray.add(currentHunger)
-            // decisionArray.add(currentHealth) 
-            // decisionArray.add(currentEntertainment) 
-            // decisionArray.add(currentComfort) // decisionArray.add(medsThreshold) 
-            // decisionArray.add(faithThreshold)
+            switch (lowIndex)
+            {
+                case 0:
+                    character.ChangeState(Kitchen_State.getInstance());
+                    break;
+                case 1:
+                    character.ChangeState(PT_State.getInstance());
+                    break;
+                case 2:
+                    character.ChangeState(Garden_State.getInstance());
+                    break;
+                case 3:
+                    character.ChangeState(Den_State.getInstance());
+                    break;
+                case 4:
+                    character.ChangeState(Infirmary_State.getInstance());
+                    break;
 
-            // decisionArray.sort(ascending)
+            }
         }
 
         void _State.exit(NPC character)
