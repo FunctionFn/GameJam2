@@ -33,7 +33,7 @@ namespace GrandmasCode
             Console.Write(character.name + ": there's nothing to do in here!  im playin shuffleboard");
             if (World.getInstance().isNight())
             {
-                character.ChangeState(Sleep_State.getInstance());
+                character.ChangeState(GoToSleep_State.getInstance());
             }
             else
             {

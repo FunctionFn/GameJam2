@@ -32,7 +32,7 @@ namespace GrandmasCode
             World.getInstance().incrementMeds();
             if (World.getInstance().isNight())
             {
-                character.ChangeState(Sleep_State.getInstance());
+                character.ChangeState(GoToSleep_State.getInstance());
             }
             else if (World.getInstance().getMedsLvl() > character.thresholds.getHiMeds() + World.getInstance().getModifier().getHiMeds())
             {

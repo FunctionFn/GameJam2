@@ -34,7 +34,7 @@ namespace GrandmasCode
             World.getInstance().incrementComfort();
             if (World.getInstance().isNight())
             {
-                character.ChangeState(Sleep_State.getInstance());
+                character.ChangeState(GoToSleep_State.getInstance());
             }
             else if (World.getInstance().getConfortLvl() > character.thresholds.getHiComfort() + World.getInstance().getModifier().getHiComfort())
             {

@@ -34,7 +34,7 @@ namespace GrandmasCode
             World.getInstance().incrementEntertainment();
             if (World.getInstance().isNight())
             {
-                character.ChangeState(Sleep_State.getInstance());
+                character.ChangeState(GoToSleep_State.getInstance());
             }
             else if (World.getInstance().getEntertainmentLvl() > character.thresholds.getHiEntertainment() + World.getInstance().getModifier().getHiEntertainment())
             {

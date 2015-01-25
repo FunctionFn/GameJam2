@@ -49,6 +49,7 @@
     <Compile Include="GoToInfirmary_State.cs" />
     <Compile Include="GoToKitchen_State.cs" />
     <Compile Include="GoToPT_State.cs" />
+    <Compile Include="GoToSleep_State.cs" />
     <Compile Include="Infirmary_State.cs" />
     <Compile Include="Kitchen_State.cs" />
     <Compile Include="Decision_State.cs" />

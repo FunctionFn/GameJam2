@@ -33,7 +33,7 @@ namespace GrandmasCode
             World.getInstance().incrementHunger();
             if (World.getInstance().isNight())
             {
-                character.ChangeState(Sleep_State.getInstance());
+                character.ChangeState(GoToSleep_State.getInstance());
             }
             else if (World.getInstance().getHungerLvl() > character.thresholds.getHiHunger() + World.getInstance().getModifier().getHiHunger())
             {

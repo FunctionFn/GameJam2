@@ -33,7 +33,7 @@ namespace GrandmasCode
             Console.Write(character.name + ": the food here tastes like cardboard");
             if (World.getInstance().isNight())
             {
-                character.ChangeState(Sleep_State.getInstance());
+                character.ChangeState(GoToSleep_State.getInstance());
             }
             else
             {
