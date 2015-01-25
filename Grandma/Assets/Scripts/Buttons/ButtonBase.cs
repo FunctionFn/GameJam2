@@ -9,7 +9,7 @@ public class ButtonBase : MonoBehaviour {
 
 	void Start () {
 		buttonTextObject = GetComponent<Text>();
-
+		selfDestruct ();
 	}
 
 	void Update () {
@@ -29,6 +29,8 @@ public class ButtonBase : MonoBehaviour {
 	public void FeedText(string buttonText)
 	{
 		buttonTextObject.text = buttonText;
+		gameObject.GetComponent<BoxCollider>().isTrigger = true;
+		gameObject.renderer.enabled = true;
 	}
 
 }
