@@ -28,7 +28,7 @@ public class Decision_State : _State
     }
     void _State.enter(NPC character)
     {
-        Console.WriteLine("Entering decision state.");
+        System.Console.WriteLine("Entering decision state.");
     }
 
     void _State.execute(NPC character)
@@ -103,24 +103,24 @@ public class Decision_State : _State
         switch (lowIndex)
         {
             case 0:
-                Console.WriteLine("Setting to Kitchen state.");
+                System.Console.WriteLine("Setting to Kitchen state.");
                 character.ChangeState(Kitchen_State.getInstance());
-                Console.WriteLine("Setting to Kitchen.");
+                System.Console.WriteLine("Setting to Kitchen.");
                 break;
             case 1:
-                Console.WriteLine("Setting to PT state.");
+                System.Console.WriteLine("Setting to PT state.");
                 character.ChangeState(PT_State.getInstance());
                 break;
             case 2:
-                Console.WriteLine("Setting to Garden state.");
+                System.Console.WriteLine("Setting to Garden state.");
                 character.ChangeState(Garden_State.getInstance());
                 break;
             case 3:
-                Console.WriteLine("Settin to Den state.");
+                System.Console.WriteLine("Settin to Den state.");
                 character.ChangeState(Den_State.getInstance());
                 break;
             case 4:
-                Console.WriteLine("Setting to Infirmary state.");
+                System.Console.WriteLine("Setting to Infirmary state.");
                 character.ChangeState(Infirmary_State.getInstance());
                 break;
 
@@ -129,7 +129,7 @@ public class Decision_State : _State
 
     void _State.exit(NPC character)
     {
-        Console.WriteLine("Exiting decision state.");
+        System.Console.WriteLine("Exiting decision state.");
     }
 
 

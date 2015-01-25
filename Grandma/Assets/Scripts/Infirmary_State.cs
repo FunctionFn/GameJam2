@@ -17,7 +17,7 @@ public class Infirmary_State : _State
 
     void _State.enter(NPC character)
     {
-        Console.Write(character.name + " entering the Infirmary");
+        System.Console.WriteLine(character.name + " entering the Infirmary");
     }
 
     void _State.execute(NPC character)
@@ -35,7 +35,7 @@ public class Infirmary_State : _State
 
     void _State.exit(NPC character)
     {
-        Console.Write(character.name + "is done in the Infirmary");
+        System.Console.WriteLine(character.name + "is done in the Infirmary");
     }
 
     //-------------------------------------------

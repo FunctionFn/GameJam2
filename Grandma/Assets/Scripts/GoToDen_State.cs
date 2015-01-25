@@ -17,13 +17,13 @@ public class GoToDen_State : _State
 
     void _State.enter(NPC character)
     {
-        Console.Write(character.name + "is going to the Den");
+        System.Console.WriteLine(character.name + "is going to the Den");
     }
 
     void _State.execute(NPC character)
     {
         // BasicPath.move(room)
-        Console.Write(character.name + ": chilly in here!  im gonna turn up the thermostat");
+        System.Console.WriteLine(character.name + ": chilly in here!  im gonna turn up the thermostat");
         if (World.getInstance().isNight())
         {
             character.ChangeState(GoToSleep_State.getInstance());
@@ -36,7 +36,7 @@ public class GoToDen_State : _State
 
     void _State.exit(NPC character)
     {
-        Console.Write(character.name + "is arriving in the Den");
+        System.Console.WriteLine(character.name + "is arriving in the Den");
     }
 
     //-------------------------------------------

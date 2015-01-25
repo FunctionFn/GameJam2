@@ -6,7 +6,6 @@
         this.name = inName;
         this.vit = (int)Constants.STARTING_VIT;
         this.curr_state = Sleep_State.getInstance();
-        this.thresholds = new Threshold(20, 80, 20, 80, 20, 80,20 ,80, 20 , 80, 20, 80);
     }
 
 

@@ -56,7 +56,8 @@
 
         public bool isNight()
         {
-            return instance.timer > 72000 || instance.timer < 25200;
+			return false;
+            return instance.timer > 72000 || instance.timer < 10;
         }
 
         public int getHungerLvl()

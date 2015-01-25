@@ -17,13 +17,13 @@ public class GoToPT_State : _State
 
     void _State.enter(NPC character)
     {
-        Console.Write(character.name + "is going to the physical therapy");
+        System.Console.WriteLine(character.name + "is going to the physical therapy");
     }
 
     void _State.execute(NPC character)
     {
         // BasicPath.move(room)
-        Console.Write(character.name + ": i feel stiff as a board.  but i hate my physical therapy");
+        System.Console.WriteLine(character.name + ": i feel stiff as a board.  but i hate my physical therapy");
         if (World.getInstance().isNight())
         {
             character.ChangeState(GoToSleep_State.getInstance());
@@ -36,7 +36,7 @@ public class GoToPT_State : _State
 
     void _State.exit(NPC character)
     {
-        Console.Write(character.name + "is arriving in the physical therapy");
+        System.Console.WriteLine(character.name + "is arriving in the physical therapy");
     }
 
     //-------------------------------------------

@@ -17,12 +17,12 @@ public class Den_State : _State
 
     void _State.enter(NPC character)
     {
-        Console.Write(character.name + "enters the Den");
+        System.Console.WriteLine(character.name + "enters the Den");
     }
 
     void _State.execute(NPC character)
     {
-        Console.Write(character.name + " is in the Den");
+        System.Console.WriteLine(character.name + " is in the Den");
 
         World.getInstance().incrementComfort();
         if (World.getInstance().isNight())
@@ -37,7 +37,7 @@ public class Den_State : _State
 
     void _State.exit(NPC character)
     {
-        Console.Write(character.name + "is done in the Den");
+        System.Console.WriteLine(character.name + "is done in the Den");
     }
 
     //-------------------------------------------

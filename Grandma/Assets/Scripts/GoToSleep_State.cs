@@ -18,13 +18,13 @@ class GoToSleep_State: _State
 
     void _State.enter(NPC character)
     {
-        Console.Write(character.name + "is going to sleep");
+        System.Console.WriteLine(character.name + "is going to sleep");
     }
 
     void _State.execute(NPC character)
     {
         // BasicPath.move(room)
-        Console.Write(character.name + ": 8:30 already?  way past my bedtime");
+        System.Console.WriteLine(character.name + ": 8:30 already?  way past my bedtime");
             
         character.ChangeState(Sleep_State.getInstance());
   
@@ -32,7 +32,7 @@ class GoToSleep_State: _State
 
     void _State.exit(NPC character)
     {
-        Console.Write(character.name + "is arriving in the bedroom");
+        System.Console.WriteLine(character.name + "is arriving in the bedroom");
     }
 
     //-------------------------------------------

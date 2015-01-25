@@ -191,7 +191,7 @@ Renderer:
   m_LightmapIndex: 255
   m_LightmapTilingOffset: {x: 1, y: 1, z: 0, w: 0}
   m_Materials:
-  - {fileID: 10302, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: fb4cc5866137c3c4a93068680dad9f43, type: 2}
   m_SubsetIndices: 
   m_StaticBatchRoot: {fileID: 0}
   m_UseLightProbes: 0
@@ -274,7 +274,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 128898, guid: 0dc478f0b34cf1445a3902ec9e39564f, type: 2}
       propertyPath: m_Name
-      value: ElderlyR
+      value: Elderly R
       objectReference: {fileID: 0}
     - target: {fileID: 11428898, guid: 0dc478f0b34cf1445a3902ec9e39564f, type: 2}
       propertyPath: bedroom
@@ -446,7 +446,7 @@ Renderer:
   m_LightmapIndex: 255
   m_LightmapTilingOffset: {x: 1, y: 1, z: 0, w: 0}
   m_Materials:
-  - {fileID: 10302, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: 06e760b46b27e68488afa14b56fc8044, type: 2}
   m_SubsetIndices: 
   m_StaticBatchRoot: {fileID: 0}
   m_UseLightProbes: 0
@@ -529,7 +529,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 128898, guid: 0dc478f0b34cf1445a3902ec9e39564f, type: 2}
       propertyPath: m_Name
-      value: ElderlyB
+      value: Elderly B
       objectReference: {fileID: 0}
     - target: {fileID: 11428898, guid: 0dc478f0b34cf1445a3902ec9e39564f, type: 2}
       propertyPath: bedroom
@@ -555,6 +555,10 @@ Prefab:
       propertyPath: rec
       value: 
       objectReference: {fileID: 1551113351}
+    - target: {fileID: 2328898, guid: 0dc478f0b34cf1445a3902ec9e39564f, type: 2}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 8b1b7216486bf084480a770b8b6851d2, type: 2}
     m_RemovedComponents:
     - {fileID: 11428898, guid: 0dc478f0b34cf1445a3902ec9e39564f, type: 2}
   m_ParentPrefab: {fileID: 100100000, guid: 0dc478f0b34cf1445a3902ec9e39564f, type: 2}
@@ -678,6 +682,10 @@ Prefab:
       propertyPath: rec
       value: 
       objectReference: {fileID: 1551113351}
+    - target: {fileID: 2328898, guid: 0dc478f0b34cf1445a3902ec9e39564f, type: 2}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: fb4cc5866137c3c4a93068680dad9f43, type: 2}
     m_RemovedComponents:
     - {fileID: 11428898, guid: 0dc478f0b34cf1445a3902ec9e39564f, type: 2}
   m_ParentPrefab: {fileID: 100100000, guid: 0dc478f0b34cf1445a3902ec9e39564f, type: 2}
@@ -751,6 +759,10 @@ Prefab:
       propertyPath: rec
       value: 
       objectReference: {fileID: 1551113351}
+    - target: {fileID: 2328898, guid: 0dc478f0b34cf1445a3902ec9e39564f, type: 2}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 06e760b46b27e68488afa14b56fc8044, type: 2}
     m_RemovedComponents:
     - {fileID: 11428898, guid: 0dc478f0b34cf1445a3902ec9e39564f, type: 2}
   m_ParentPrefab: {fileID: 100100000, guid: 0dc478f0b34cf1445a3902ec9e39564f, type: 2}
@@ -898,6 +910,7 @@ GameObject:
   - 92: {fileID: 960422790}
   - 124: {fileID: 960422789}
   - 81: {fileID: 960422788}
+  - 114: {fileID: 960422793}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -970,6 +983,17 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 2
+--- !u!114 &960422793
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 960422787}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6b752f346be2c974b9f2973982a1d893, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1300933029
 GameObject:
   m_ObjectHideFlags: 0
@@ -983,7 +1007,7 @@ GameObject:
   - 23: {fileID: 1300933031}
   - 114: {fileID: 1300933030}
   m_Layer: 0
-  m_Name: ElderlyR
+  m_Name: Elderly R
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1133,7 +1157,7 @@ Renderer:
   m_LightmapIndex: 255
   m_LightmapTilingOffset: {x: 1, y: 1, z: 0, w: 0}
   m_Materials:
-  - {fileID: 10302, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: d9c4dc20e5db5cb42b68902814085146, type: 2}
   m_SubsetIndices: 
   m_StaticBatchRoot: {fileID: 0}
   m_UseLightProbes: 0
@@ -1292,6 +1316,10 @@ Prefab:
       propertyPath: rec
       value: 
       objectReference: {fileID: 1551113351}
+    - target: {fileID: 2328898, guid: 0dc478f0b34cf1445a3902ec9e39564f, type: 2}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: d9c4dc20e5db5cb42b68902814085146, type: 2}
     m_RemovedComponents:
     - {fileID: 11428898, guid: 0dc478f0b34cf1445a3902ec9e39564f, type: 2}
   m_ParentPrefab: {fileID: 100100000, guid: 0dc478f0b34cf1445a3902ec9e39564f, type: 2}
@@ -1474,7 +1502,7 @@ GameObject:
   - 23: {fileID: 1799050255}
   - 114: {fileID: 1799050254}
   m_Layer: 0
-  m_Name: ElderlyB
+  m_Name: Elderly B
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1515,7 +1543,7 @@ Renderer:
   m_LightmapIndex: 255
   m_LightmapTilingOffset: {x: 1, y: 1, z: 0, w: 0}
   m_Materials:
-  - {fileID: 10302, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: 8b1b7216486bf084480a770b8b6851d2, type: 2}
   m_SubsetIndices: 
   m_StaticBatchRoot: {fileID: 0}
   m_UseLightProbes: 0

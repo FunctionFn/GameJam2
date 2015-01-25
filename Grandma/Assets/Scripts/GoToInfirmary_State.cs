@@ -16,13 +16,13 @@
 
     void _State.enter(NPC character)
     {
-        Console.Write(character.name + "is going to the infirmary");
+        System.Console.WriteLine(character.name + "is going to the infirmary");
     }
 
     void _State.execute(NPC character)
     {
         // BasicPath.move(room)
-        Console.Write(character.name + ": on ma way to take ma meds!");
+        System.Console.WriteLine(character.name + ": on ma way to take ma meds!");
         if (World.getInstance().isNight())
         {
             character.ChangeState(GoToSleep_State.getInstance());
@@ -35,7 +35,7 @@
 
     void _State.exit(NPC character)
     {
-        Console.Write(character.name + "is arriving in the infirmary");
+        System.Console.WriteLine(character.name + "is arriving in the infirmary");
     }
 
     //-------------------------------------------

@@ -39,7 +39,7 @@ public class ElderlyBase : MonoBehaviour {
 
 
 		behaviorState = 0;
-		beginMovement ();
+		//beginMovement ();
 	}
 	
 	// Update is called once per frame
@@ -54,6 +54,20 @@ public class ElderlyBase : MonoBehaviour {
 		Debug.Log ("changeState()");
 		behaviorState = Random.Range(0,6);
 	}
+
+	public void MoveTo(Vector3 target)
+	{
+		iTween.MoveTo(gameObject, iTween.Hash ("position", target,
+		                                      "easetype", iTween.EaseType.linear,
+		                                      "time", travelTime));
+		                                      //"delay", waitTime
+		                                      //"oncomplete", "",
+		                                      //"oncompletetarget", gameObject
+
+
+	}
+
+
 
 	void beginMovement()
 	{
@@ -109,7 +123,7 @@ public class ElderlyBase : MonoBehaviour {
 
 	Vector3[] getPath()
 	{
-		changeState ();
+		//changeState ();
 		Debug.Log ("getPath()");
 		Vector3[] path = new [] { 
 			gameObject.transform.position, 

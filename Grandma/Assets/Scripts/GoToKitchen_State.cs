@@ -16,13 +16,13 @@
 
     void _State.enter(NPC character)
     {
-        Console.Write(character.name + "is going to the Kitchen");
+        System.Console.WriteLine(character.name + "is going to the Kitchen");
     }
 
     void _State.execute(NPC character)
     {
         // BasicPath.move(room)
-        Console.Write(character.name + ": the food here tastes like cardboard");
+        System.Console.WriteLine(character.name + ": the food here tastes like cardboard");
         if (World.getInstance().isNight())
         {
             character.ChangeState(GoToSleep_State.getInstance());
@@ -35,7 +35,7 @@
 
     void _State.exit(NPC character)
     {
-        Console.Write(character.name + "is arriving in the kitchen");
+        System.Console.WriteLine(character.name + "is arriving in the kitchen");
     }
 
     //-------------------------------------------
