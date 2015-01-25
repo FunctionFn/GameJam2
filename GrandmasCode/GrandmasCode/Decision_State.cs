@@ -92,18 +92,24 @@ namespace GrandmasCode
             switch (lowIndex)
             {
                 case 0:
+                    Console.WriteLine("Setting to Kitchen state.");
                     character.ChangeState(Kitchen_State.getInstance());
+                    Console.WriteLine("Setting to Kitchen.");
                     break;
                 case 1:
+                    Console.WriteLine("Setting to PT state.");
                     character.ChangeState(PT_State.getInstance());
                     break;
                 case 2:
-                    character.ChangeState(Garden_State.getInstance());
+                    Console.WriteLine("Setting to Garden state.");
+                    character.ChangeState(Garden_State.getInstance());  
                     break;
                 case 3:
+                    Console.WriteLine("Settin to Den state.");
                     character.ChangeState(Den_State.getInstance());
                     break;
                 case 4:
+                    Console.WriteLine("Setting to Infirmary state.");
                     character.ChangeState(Infirmary_State.getInstance());
                     break;
 
