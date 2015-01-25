@@ -1,7 +1,7 @@
 ﻿class An_Comfort : Announcement
 {
     private An_Comfort()
-        : base("Comfortday's a special day!", new Threshold(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0))
+        : base("It's important to be comfortable,\nTake time to relax today!", new Threshold(0, 0, 0, 0, 0, 0, 15, 15, 0, 0, 0, 0))
     {
     }
 

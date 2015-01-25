@@ -1,7 +1,7 @@
 ﻿class An_Hunger : Announcement
 {
     private An_Hunger()
-        : base("Hungerday's a special day!", new Threshold(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0))
+        : base("Don't skip meals everyone,\nTreat yourself to something hardy", new Threshold(15, 15, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0))
     {
     }
 

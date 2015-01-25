@@ -1,7 +1,7 @@
 ﻿class An_Health : Announcement
 {
     private An_Health()
-        : base("Healthday's a special day!", new Threshold(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0))
+        : base("We can's forget the importance of\nfitness, let's keep active!", new Threshold(0, 0, 15, 15, 0, 0, 0, 0, 0, 0, 0, 0))
     {
     }
 
