@@ -26,6 +26,11 @@ namespace GrandmasCode
                 abe.Update();
                 ethel.Update();
                 edgar.Update();
+
+                joe.isWalking = false;
+                abe.isWalking = false;
+                ethel.isWalking = false;
+                edgar.isWalking = false;
             }
             //_State myState = new Decision_State().get;
 

@@ -19,6 +19,7 @@
         // Timer, should be fixed later on
         private int timer;
         private Threshold modifier;
+        private System.Random random;
 
         private World()
         {
@@ -31,6 +32,7 @@
             this.confortLvl = 60;
             this.medsLvl = 60;
             this.faithLvl = 60;
+            this.random = new System.Random(14);
         }
 
         public static World getInstance()
@@ -62,7 +64,7 @@
 
         public bool isNight()
         {
-		return false;
+		    return false;
             return instance.timer > 72000 || instance.timer < 10;
         }
 
@@ -134,6 +136,11 @@
         public void incrementFaith()
         {
             instance.faithLvl += INCREMENT;
+        }
+
+        public double getRandom()
+        {
+            return this.random.NextDouble();
         }
 		
 		public Conditions getLeast()
