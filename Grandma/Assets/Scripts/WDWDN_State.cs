@@ -27,6 +27,9 @@ public class WDWDN_State : _State
     void _State.execute(NPC character)
     {
         System.Console.WriteLine(character.name + " asks: \"What do we do now?\"");
+
+        ButtonBottom.FeedText();
+
         character.ChangeState(Decision_State.getInstance());
     }
 
