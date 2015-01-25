@@ -3,8 +3,16 @@ using System.Collections;
 
 public class GlobalTimer : MonoBehaviour {
 
-
-	float timer;
+	private static GlobalTimer _inst;
+	public static GlobalTimer Inst { get { return _inst; } }
+	
+	void Awake()
+	{
+		
+		_inst = this;
+		
+	}
+	public float timer;
 	// Use this for initialization
 	void Start () {
 		timer = 0f;
@@ -17,6 +25,7 @@ public class GlobalTimer : MonoBehaviour {
 
 		if (timer >= 60) {
 			timer=0;
-				}
+			AnnouncementMan.getInstance().day++;
+		}
 	}
 }

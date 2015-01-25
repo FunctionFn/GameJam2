@@ -12,7 +12,7 @@ public class ElderlyYellow: ElderlyBase {
 		_inst = this;
 		
 	}*/
-
+	public AudioSource talk;
 
 	void Start()
 	{
@@ -23,6 +23,7 @@ public class ElderlyYellow: ElderlyBase {
 
 	void OnMouseDown() {
 		ElderlyYellowSpeechBubble.Inst.Appear ();
+		talk.Play ();
 	}
 	
 }
