@@ -16,19 +16,19 @@
 
     public Announcement getBottom()
     {
-        enum mostUrgent = World.getInstance().getLeast();
+        //enum mostUrgent = World.getInstance().getLeast();
 
-        switch (mostUrgent)
+		switch (World.getInstance().getLeast())
         {
-            case HUNGER:
+            case Conditions.HUNGER:
                 return An_Hunger.getInstance();
-            case HEALTH:
+			case Conditions.HEALTH:
                 return An_Health.getInstance();
-            case MEDS:
+			case Conditions.MEDS:
                 return An_Meds.getInstance();
-            case ENERTAINMENT:
+			case Conditions.ENTERTAINMENT:
                 return An_Entertain.getInstance();
-            case default:
+            default:
                 return An_Comfort.getInstance();
         }
 
@@ -36,7 +36,28 @@
 
     public Announcement getTop()
     {
-        
+		AnnouncementMan announcer = AnnouncementMan.getInstance ();
+		announcer.day++;
+		if (announcer.day > 6) {
+			announcer.day = 0;
+		}
+		switch (day) {
+		case 0:
+			return An_Sun.getInstance();
+		case 1:
+			return An_Mon.getInstance();
+		case 2:
+			return An_Tue.getInstance();
+		case 3:
+			return An_Wed.getInstance();
+		case 4:
+			return An_Thu.getInstance();
+		case 5:
+			return An_Fri.getInstance();
+		default:
+			return An_Sat.getInstance();
+
+		}
     }
 
     //----------------------

@@ -31,7 +31,7 @@ public class Den_State : _State
         {
             character.ChangeState(GoToSleep_State.getInstance());
         }
-        else if (World.getInstance().getConfortLvl() > character.thresholds.getHiComfort() + World.getInstance().getModifier().getHiComfort())
+        else if (World.getInstance().getComfortLvl() > character.thresholds.getHiComfort() + World.getInstance().getModifier().getHiComfort())
         {
             character.ChangeState(Decision_State.getInstance());
         }

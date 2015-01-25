@@ -20,6 +20,7 @@
         private int timer;
         private Threshold modifier;
 		private int elderlyLeft;
+		private System.Random random = new System.Random(System.DateTime.Today.Millisecond); 
         private World()
         {
             // Do nothing
@@ -189,6 +190,11 @@
                 instance.faithLvl = 100;
             }
         }
+
+		public double getRandom()
+		{
+			return this.random.NextDouble();
+		}
 
 		public void reportDeath() 
 		{

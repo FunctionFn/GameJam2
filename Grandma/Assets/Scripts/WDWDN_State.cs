@@ -28,7 +28,8 @@ public class WDWDN_State : _State
     {
         System.Console.WriteLine(character.name + " asks: \"What do we do now?\"");
 
-        ButtonBottom.FeedText();
+		ButtonBottom.Inst.FeedText(AnnouncementMan.getInstance().getBottom().message);
+		ButtonTop.Inst.FeedText(AnnouncementMan.getInstance().getTop().message);
 
         character.ChangeState(Decision_State.getInstance());
     }

@@ -1,4 +1,15 @@
-﻿public abstract class Announcement
+﻿public enum weekDays
+{
+	SUNDAY,
+	MONDAY,
+	TUESDAY,
+	WEDNESDAY,
+	THURSDAY,
+	FRIDAY,
+	SATURDAY
+}
+
+public abstract class Announcement
 {
     protected Announcement(string msg, Threshold t)
     {

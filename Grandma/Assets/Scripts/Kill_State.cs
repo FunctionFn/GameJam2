@@ -19,7 +19,7 @@ public class Kill_State: _State
 	{
 		World.getInstance ().reportDeath (); //decrement global population
 		System.Console.WriteLine(character.name + " died.");
-		if (World.getInstance ().getElderlyLeft <= 0) 
+		if (World.getInstance ().getElderlyLeft() <= 0) 
 			{
 			//END THE WHOLE DAMN GAME
 			}

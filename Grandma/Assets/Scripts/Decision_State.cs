@@ -71,7 +71,7 @@ public class Decision_State : _State
                                         - character.thresholds.getLowEntertainment()
                                         + World.getInstance().getModifier().getLowEntertainment());
 
-        currentComfort = (World.getInstance().getConfortLvl()
+        currentComfort = (World.getInstance().getComfortLvl()
                                         - character.thresholds.getLowComfort()
                                         + World.getInstance().getModifier().getLowComfort());
 

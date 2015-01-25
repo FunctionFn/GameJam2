@@ -33,16 +33,16 @@ public class Sleep_State : _State
         // if NPC.threshold.lowestthreshold
 
         
-		int[] decisionArray = new int[5];
+		int[] decisionArray = new int[6];
 		int min = int.MaxValue;
 		int lowIndex = 0;
 		
-		decisionArray[0] = World.getInstance().getHungerLvl - character.threshold.lowHunger;
-		decisionArray[1] = World.getInstance().getHealthLvl - character.threshold.lowHealth;
-        decisionArray[2] = World.getInstance().getEntertainmentLvl - character.threshold.lowEntertainment;
-        decisionArray[3] = World.getInstance().getComfortLvl - character.threshold.lowComfort;
-        decisionArray[4] = World.getInstance().getThresholdLvl - character.threshold.lowMeds;
-        decisionArray[5] = World.getInstance().getFaithLvl - character.threshold.lowFaith;
+		decisionArray[0] = World.getInstance().getHungerLvl() - character.thresholds.getLowHunger();
+		decisionArray[1] = World.getInstance().getHealthLvl() - character.thresholds.getLowHealth();
+        decisionArray[2] = World.getInstance().getEntertainmentLvl() - character.thresholds.getLowEntertainment();
+        decisionArray[3] = World.getInstance().getComfortLvl() - character.thresholds.getLowComfort();
+        decisionArray[4] = World.getInstance().getMedsLvl() - character.thresholds.getLowMeds();
+        decisionArray[5] = World.getInstance().getFaithLvl() - character.thresholds.getLowFaith();
 			
 		for (int i = 0; i <= 5; i++)
 		{

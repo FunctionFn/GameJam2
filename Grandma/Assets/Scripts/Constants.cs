@@ -11,5 +11,6 @@
     public const double WANDER_CHANCE = 0.1;
     public const double REMINISCE_CHANCE = 0.1;
     public const double BACK_FROM_ODD_CHANCE = 0.1;
+	public const double SAY_SOMETHING_CHANCE = 0.3;
 }
 
