@@ -1,6 +1,6 @@
 # GameJam2
 
-ENTER_HUNGER "With every year my tummy rumbles gain a decible."
+ENTER_HUNGER "With every year my tummy rumbles gain a decible."\n
 ENTER_HUNGER "Is it Tuesday? I thought it was Tapioca tuesday?"
 EXIT_HUNGER "Mmmm, nothing is worse than that peckerhead of a mother-in-law's meatloaf was."
 EXIT_HUNGER "I'm full of apple sauce!"
