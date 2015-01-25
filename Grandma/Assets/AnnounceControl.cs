@@ -15,7 +15,7 @@ public class AnnounceControl : MonoBehaviour {
     // Update is called once per frame
     void Update()
     {
-        int seconds = Time.time;
+        float seconds = Time.time;
         bool oddeven = seconds % 2 == 0;
         renderer.enabled = oddeven;
     }
