@@ -75,6 +75,15 @@ public class Sleep_State : _State
                 break;
 		}
 
+        if (character.vit <= 0)
+        {
+            character.ChangeState(Kill_State.getInstance());
+        }
+
+        if (character.vit > 100)
+        {
+            character.vit = 100;
+        }
 
         if (!World.getInstance().isNight() & character.vit > 0)
         {
