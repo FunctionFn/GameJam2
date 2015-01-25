@@ -13,7 +13,7 @@ public class GlobalTimer : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
 		timer += Time.fixedDeltaTime;
-		Debug.Log (timer);
+		//Debug.Log (timer);
 
 		if (timer >= 60) {
 			timer=0;
