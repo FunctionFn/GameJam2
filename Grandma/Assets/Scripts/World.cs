@@ -4,7 +4,7 @@
 	ENTERTAINMENT,
 	COMFORT,
 	MEDS
-}
+};
     public class World
     {
         private const int INCREMENT = 2;
@@ -136,9 +136,9 @@
             instance.faithLvl += INCREMENT;
         }
 		
-		public enum getLeast()
+		public Conditions getLeast()
 		{
-		
+		    int[] decisionArray = new int[5];
 			int min = int.MaxValue;
 			int lowIndex = 0;
 		
@@ -171,7 +171,7 @@
 				case 3:
 					return Conditions.COMFORT;
 
-				case 4:
+				default:
 					return Conditions.MEDS;
 			}
 			
