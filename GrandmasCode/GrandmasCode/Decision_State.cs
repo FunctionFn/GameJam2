@@ -62,12 +62,29 @@ namespace GrandmasCode
 
 
             // calculate relevant values for decision-making
-            currentHunger = character.thresholds.getLowHunger(); // add world, add announcement
-            currentHealth = character.thresholds.getLowHealth(); // modifier for relevant 
-            currentEntertainment = character.thresholds.getLowEntertainment();
-            currentComfort = character.thresholds.getLowComfort();
-            currentMeds = character.thresholds.getLowMeds();
-            currentFaith = character.thresholds.getLowFaith();
+            currentHunger =             (World.getInstance().getHungerLvl()
+                                            - character.thresholds.getLowHunger()
+                                            + World.getInstance().getModifier().getLowHunger());
+
+            currentHealth =             (World.getInstance().getHealthLvl()
+                                            - character.thresholds.getLowHealth()
+                                            + World.getInstance().getModifier().getLowHealth()); 
+
+            currentEntertainment =      (World.getInstance().getEntertainmentLvl()
+                                            - character.thresholds.getLowEntertainment()
+                                            + World.getInstance().getModifier().getLowEntertainment());
+
+            currentComfort =            (World.getInstance().getConfortLvl()
+                                            - character.thresholds.getLowComfort()
+                                            + World.getInstance().getModifier().getLowComfort());
+
+            currentMeds =               (World.getInstance().getHealthLvl()
+                                            - character.thresholds.getLowMeds()
+                                            + World.getInstance().getModifier().getLowMeds());
+
+            currentFaith =              (World.getInstance().getFaithLvl()
+                                            - character.thresholds.getLowFaith()
+                                            + World.getInstance().getModifier().getLowFaith());
 
             decisionArray[0] = currentHunger;
             decisionArray[1] = currentHealth;
