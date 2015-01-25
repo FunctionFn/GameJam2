@@ -94,7 +94,7 @@ public class Decision_State : _State
         // subtract from this
 
         //Find priority movement 
-        for (int i = 0; i < 4; i++)
+        for (int i = 0; i < 5; i++)
         {
             if (decisionArray[i] < min)
             {
@@ -103,30 +103,45 @@ public class Decision_State : _State
             }
         }
 
-        switch (lowIndex)
+        if (World.getInstance().getRandom() < Constants.NAP_CHANCE)
         {
-            case 0:
-                System.Console.WriteLine("Setting to Kitchen state.");
-                character.ChangeState(GoToKitchen_State.getInstance());
-                System.Console.WriteLine("Setting to Kitchen.");
-                break;
-            case 1:
-                System.Console.WriteLine("Setting to PT state.");
-                character.ChangeState(GoToPT_State.getInstance());
-                break;
-            case 2:
-                System.Console.WriteLine("Setting to Garden state.");
-                character.ChangeState(GoToGarden_State.getInstance());
-                break;
-            case 3:
-                System.Console.WriteLine("Settin to Den state.");
-                character.ChangeState(GoToDen_State.getInstance());
-                break;
-            case 4:
-                System.Console.WriteLine("Setting to Infirmary state.");
-                character.ChangeState(GoToInfirmary_State.getInstance());
-                break;
+            character.ChangeState(Nap_State.getInstance());
+        }
+        else if (World.getInstance().getRandom() < Constants.REMINISCE_CHANCE)
+        {
+            character.ChangeState(Reminisce_State.getInstance());
+        }
+        else if (World.getInstance().getRandom() < Constants.WANDER_CHANCE)
+        {
+            character.ChangeState(Wander_State.getInstance());
+        }
+        else
+        {
+            switch (lowIndex)
+            {
+                case 0:
+                    System.Console.WriteLine("Setting to Kitchen state.");
+                    character.ChangeState(GoToKitchen_State.getInstance());
+                    System.Console.WriteLine("Setting to Kitchen.");
+                    break;
+                case 1:
+                    System.Console.WriteLine("Setting to PT state.");
+                    character.ChangeState(GoToPT_State.getInstance());
+                    break;
+                case 2:
+                    System.Console.WriteLine("Setting to Garden state.");
+                    character.ChangeState(GoToGarden_State.getInstance());
+                    break;
+                case 3:
+                    System.Console.WriteLine("Settin to Den state.");
+                    character.ChangeState(GoToDen_State.getInstance());
+                    break;
+                case 4:
+                    System.Console.WriteLine("Setting to Infirmary state.");
+                    character.ChangeState(GoToInfirmary_State.getInstance());
+                    break;
 
+            }
         }
     }
 
