@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class BasicPath : MonoBehaviour {
+public class ElderlyBase : MonoBehaviour {
 
 
 
@@ -134,10 +134,10 @@ public class BasicPath : MonoBehaviour {
 		{
 			return garden;
 		}
-		if (behaviorState == 4) {
+		if (behaviorState == 4) 
+		{
 			return clinic;
-
-				}
+		}
 		if (behaviorState == 5)
 		{
 			return rec;
