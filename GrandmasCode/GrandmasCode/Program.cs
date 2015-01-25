@@ -10,12 +10,22 @@ namespace GrandmasCode
     {
         static void Main(string[] args)
         {
-            NPC npc = new NPC("Joe");
+            NPC joe = new NPC("Joe");
+            joe.thresholds = new Threshold(19, 88, 25, 75, 30, 66, 15, 80, 50, 80, 20, 80);
+            NPC abe = new NPC("Abraham");
+            abe.thresholds = new Threshold(17, 64, 19, 88, 25, 75, 30, 66, 15, 78, 19, 88);
+            NPC ethel = new NPC("Ethel");
+            ethel.thresholds = new Threshold(15, 77, 20, 68, 19, 88, 25, 75, 19, 88, 25, 75);
+            NPC edgar = new NPC("Edgar");
+            edgar.thresholds = new Threshold(22, 59, 21, 80, 20, 80, 19, 88, 25, 75, 30, 66);
 
             while (true)
             {
                 World.getInstance().update();
-                npc.Update();
+                joe.Update();
+                abe.Update();
+                ethel.Update();
+                edgar.Update();
             }
             //_State myState = new Decision_State().get;
 
