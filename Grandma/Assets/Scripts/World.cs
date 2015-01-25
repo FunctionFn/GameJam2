@@ -13,7 +13,7 @@
         private int hungerLvl;
         private int healthLvl;
         private int entertainmentLvl;
-        private int confortLvl;
+        private int comfortLvl;
         private int medsLvl;
         private int faithLvl;
         // Timer, should be fixed later on
@@ -28,7 +28,7 @@
             this.hungerLvl = 60;
             this.healthLvl = 60;
             this.entertainmentLvl = 60;
-            this.confortLvl = 60;
+            this.comfortLvl = 60;
             this.medsLvl = 60;
             this.faithLvl = 60;
         }
@@ -46,11 +46,35 @@
         {
             // Update things
             instance.hungerLvl--;
+            if (instance.hungerLvl < 0)
+            {
+                instance.hungerLvl = 0;
+            }
             instance.healthLvl--;
+            if (instance.healthLvl < 0)
+            {
+                instance.healthLvl = 0;
+            }
             instance.entertainmentLvl--;
-            instance.confortLvl--;
+            if (instance.entertainmentLvl < 0)
+            {
+                instance.entertainmentLvl = 0;
+            }
+            instance.comfortLvl--;
+            if (instance.comfortLvl < 0)
+            {
+                instance.comfortLvl = 0;
+            }
             instance.medsLvl--;
+            if (instance.medsLvl < 0)
+            {
+                instance.medsLvl = 0;
+            }
             instance.faithLvl--;
+            if (instance.faithLvl < 0)
+            {
+                instance.faithLvl = 0;
+            }
             // Must stop at zero
 
             instance.timer++;
@@ -81,9 +105,9 @@
             return instance.entertainmentLvl;
         }
 
-        public int getConfortLvl()
+        public int getcomfortLvl()
         {
-            return instance.confortLvl;
+            return instance.comfortLvl;
         }
 
         public int getMedsLvl()
@@ -109,31 +133,55 @@
         public void incrementHunger()
         {
             instance.hungerLvl += INCREMENT;
+            if (instance.hungerLvl > 100)
+            {
+                instance.hungerLvl = 100;
+            }
         }
 
         public void incrementHealth()
         {
             instance.healthLvl += INCREMENT;
+            if (instance.healthLvl > 100)
+            {
+                instance.healthLvl = 100;
+            }
         }
 
         public void incrementEntertainment()
         {
             instance.entertainmentLvl += INCREMENT;
+            if (instance.entertainmentLvl > 100)
+            {
+                instance.entertainmentLvl = 100;
+            }
         }
 
         public void incrementComfort()
         {
-            instance.confortLvl += INCREMENT;
+            instance.comfortLvl += INCREMENT;
+            if (instance.comfortLvl > 100)
+            {
+                instance.comfortLvl = 100;
+            }
         }
 
         public void incrementMeds()
         {
             instance.medsLvl += INCREMENT;
+            if (instance.medsLvl > 100)
+            {
+                instance.medsLvl = 100;
+            }
         }
 
         public void incrementFaith()
         {
             instance.faithLvl += INCREMENT;
+            if (instance.faithLvl > 100)
+            {
+                instance.faithLvl = 100;
+            }
         }
 		
 		public Conditions getLeast()
@@ -145,7 +193,7 @@
 			decisionArray[0] = instance.hungerLvl;
 			decisionArray[1] = instance.healthLvl;
 			decisionArray[2] = instance.entertainmentLvl;
-			decisionArray[3] = instance.confortLvl;
+			decisionArray[3] = instance.comfortLvl;
 			decisionArray[4] = instance.medsLvl;
 			
 			for (int i = 0; i <= 4; i++)
