@@ -24,20 +24,20 @@ namespace GrandmasCode
 
         void _State.enter(NPC character)
         {
-            Console.Write(character.name + "is in the Physical Therapy Room");
+            Console.Write(character.name + " is entering the Physical Therapy Room");
         }
 
-        void _State.execute(NPC chararcter)
+        void _State.execute(NPC character)
         {
-
-            while (true)
+            Console.Write(character.name + "is in the Physical Therapy Room");
+            World.getInstance().incrementHealth();
+            if (World.getInstance().isNight())
             {
-                break;
+                character.ChangeState(Sleep_State.getInstance());
             }
-
-            if (false)
+            else if (World.getInstance().getHealthLvl() > character.thresholds.getHiHealth() + World.getInstance().getModifier().getHiHealth())
             {
-                //chararcter.ChangeState(Measure_State.getInstance());
+                character.ChangeState(Decision_State.getInstance());
             }
         }
 

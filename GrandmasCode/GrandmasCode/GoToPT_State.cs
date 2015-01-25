@@ -31,7 +31,14 @@ namespace GrandmasCode
         {
             // BasicPath.move(room)
             Console.Write(character.name + ": i feel stiff as a board.  but i hate my physical therapy");
-            character.ChangeState(PT_State.getInstance());
+            if (World.getInstance().isNight())
+            {
+                character.ChangeState(Sleep_State.getInstance());
+            }
+            else
+            {
+                character.ChangeState(PT_State.getInstance());
+            }
         }
 
         void _State.exit(NPC character)

@@ -31,7 +31,14 @@ namespace GrandmasCode
         {
             // BasicPath.move(room)
             Console.Write(character.name + ": on ma way to take ma meds!");
-            character.ChangeState(Infirmary_State.getInstance());
+            if (World.getInstance().isNight())
+            {
+                character.ChangeState(Sleep_State.getInstance());
+            }
+            else
+            {
+                character.ChangeState(Infirmary_State.getInstance());
+            }
         }
 
         void _State.exit(NPC character)

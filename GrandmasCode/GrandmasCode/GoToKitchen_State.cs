@@ -31,7 +31,14 @@ namespace GrandmasCode
         {
             // BasicPath.move(room)
             Console.Write(character.name + ": the food here tastes like cardboard");
-            character.ChangeState(Kitchen_State.getInstance());
+            if (World.getInstance().isNight())
+            {
+                character.ChangeState(Sleep_State.getInstance());
+            }
+            else
+            {
+                character.ChangeState(Kitchen_State.getInstance());
+            }
         }
 
         void _State.exit(NPC character)
