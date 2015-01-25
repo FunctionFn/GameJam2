@@ -6,6 +6,7 @@
         this.name = inName;
         this.vit = (int)Constants.STARTING_VIT;
         this.curr_state = Sleep_State.getInstance();
+        this.curr_room = BedroomRoom.getInstance();
     }
 
 
@@ -26,6 +27,7 @@
     //----------------
     public string name;
     public _State curr_state;
+    public Room curr_room;
     public Threshold thresholds;
     public int vit;
 

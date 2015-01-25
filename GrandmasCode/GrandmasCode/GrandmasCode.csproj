@@ -41,8 +41,11 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="BedroomRoom.cs" />
     <Compile Include="Constants.cs" />
+    <Compile Include="DenRoom.cs" />
     <Compile Include="Den_State.cs" />
+    <Compile Include="GardenRoom.cs" />
     <Compile Include="Garden_State.cs" />
     <Compile Include="GoToDen_State.cs" />
     <Compile Include="GoToGarden_State.cs" />
@@ -50,12 +53,16 @@
     <Compile Include="GoToKitchen_State.cs" />
     <Compile Include="GoToPT_State.cs" />
     <Compile Include="GoToSleep_State.cs" />
+    <Compile Include="InfirmaryRoom.cs" />
     <Compile Include="Infirmary_State.cs" />
+    <Compile Include="KitchenRoom.cs" />
     <Compile Include="Kitchen_State.cs" />
     <Compile Include="Decision_State.cs" />
+    <Compile Include="NoRoom.cs" />
     <Compile Include="NPC.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="PTRoom.cs" />
     <Compile Include="PT_State.cs" />
     <Compile Include="Room.cs" />
     <Compile Include="Sleep_State.cs" />

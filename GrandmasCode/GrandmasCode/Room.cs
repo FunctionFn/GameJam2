@@ -1,7 +1,7 @@
-﻿public class Room
+﻿public abstract class Room
 {
-    private int capacity;
-    private int occupancy;
+    protected int capacity;
+    protected int occupancy;
 
     public Room(int capacity)
     {
