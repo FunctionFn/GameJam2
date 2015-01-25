@@ -91,7 +91,7 @@ public class Decision_State : _State
         // subtract from this
 
         //Find priority movement 
-        for (int i = 0; i < 4; i++)
+        for (int i = 0; i <= 4; i++)
         {
             if (decisionArray[i] < min)
             {
