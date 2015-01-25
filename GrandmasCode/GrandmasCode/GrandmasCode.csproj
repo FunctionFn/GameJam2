@@ -41,7 +41,19 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Announcement.cs" />
+    <Compile Include="An_Fri.cs" />
+    <Compile Include="An_Mon.cs" />
+    <Compile Include="An_Sat.cs" />
+    <Compile Include="An_Thu.cs" />
+    <Compile Include="An_Tue.cs" />
+    <Compile Include="An_Wed.cs" />
     <Compile Include="Constants.cs" />
+    <Compile Include="An_Meds.cs" />
+    <Compile Include="An_Health.cs" />
+    <Compile Include="An_Entertain.cs" />
+    <Compile Include="An_Hunger.cs" />
+    <Compile Include="An_Comfort.cs" />
     <Compile Include="Den_State.cs" />
     <Compile Include="Garden_State.cs" />
     <Compile Include="GoToDen_State.cs" />
@@ -59,6 +71,7 @@
     <Compile Include="PT_State.cs" />
     <Compile Include="Room.cs" />
     <Compile Include="Sleep_State.cs" />
+    <Compile Include="An_Sun.cs" />
     <Compile Include="Threshold.cs" />
     <Compile Include="WDWDN_State.cs" />
     <Compile Include="World.cs" />
