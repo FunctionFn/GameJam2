@@ -23,8 +23,6 @@
 		private System.Random random = new System.Random(System.DateTime.Today.Millisecond); 
         private World()
         {
-            // Do nothing
-            this.timer = 0;
             this.modifier = new Threshold(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0);
             this.hungerLvl = 60;
             this.healthLvl = 60;
@@ -78,18 +76,11 @@
                 instance.faithLvl = 0;
             }
             // Must stop at zero
-
-            instance.timer++;
-            if (instance.timer == 86400)
-            {
-                instance.timer = 0;
-            }
         }
 
         public bool isNight()
         {
-		return false;
-            return instance.timer > 72000 || instance.timer < 10;
+			return GlobalTimer.Inst.timer > 45.0f;
         }
 
         public int getHungerLvl()

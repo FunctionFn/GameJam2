@@ -66,7 +66,19 @@ public class ElderlyBase : MonoBehaviour {
 				MoveTo(clinic.transform.position);
 			}
 		}
-		
+		if (npc.curr_state == Sleep_State.getInstance ()) {
+			iTween.FadeTo(gameObject, iTween.Hash("alpha", 1f,
+			                                      "amount", 0f,
+			                                      "time",0.42f));
+		}
+		else {
+			iTween.FadeTo(gameObject, iTween.Hash("alpha", 0f,
+			                                      "amount", 1f,
+			                                      "time",0.42f));
+		}
+		Vector3 v = transform.position;
+		v.z = v.y / -10.0f;
+		transform.position = v;
 	}
 
 	void changeState()
