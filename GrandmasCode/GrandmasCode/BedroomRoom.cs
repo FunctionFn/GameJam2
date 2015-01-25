@@ -3,7 +3,7 @@
     private static BedroomRoom instance;
 
     private BedroomRoom()
-        : base(Constants.BEDROOM_CAPACITY)
+        : base(Constants.POPULATION)
     {
     }
 

@@ -28,11 +28,14 @@ public class Decision_State : _State
     }
     void _State.enter(NPC character)
     {
-        System.Console.WriteLine("Entering decision state.");
+        System.Console.WriteLine(character.name + " Entering decision state.");
+        character.curr_room.leave();
+        character.curr_room = NoRoom.getInstance().enter();
     }
 
     void _State.execute(NPC character)
     {
+        System.Console.WriteLine(character.name + " deciding...");
         /*
             * Gets all relevant states for the specific NPC
             * and creates an list (priority queue?) of the 
@@ -104,24 +107,24 @@ public class Decision_State : _State
         {
             case 0:
                 System.Console.WriteLine("Setting to Kitchen state.");
-                character.ChangeState(Kitchen_State.getInstance());
+                character.ChangeState(GoToKitchen_State.getInstance());
                 System.Console.WriteLine("Setting to Kitchen.");
                 break;
             case 1:
                 System.Console.WriteLine("Setting to PT state.");
-                character.ChangeState(PT_State.getInstance());
+                character.ChangeState(GoToPT_State.getInstance());
                 break;
             case 2:
                 System.Console.WriteLine("Setting to Garden state.");
-                character.ChangeState(Garden_State.getInstance());
+                character.ChangeState(GoToGarden_State.getInstance());
                 break;
             case 3:
                 System.Console.WriteLine("Settin to Den state.");
-                character.ChangeState(Den_State.getInstance());
+                character.ChangeState(GoToDen_State.getInstance());
                 break;
             case 4:
                 System.Console.WriteLine("Setting to Infirmary state.");
-                character.ChangeState(Infirmary_State.getInstance());
+                character.ChangeState(GoToInfirmary_State.getInstance());
                 break;
 
         }
@@ -129,7 +132,7 @@ public class Decision_State : _State
 
     void _State.exit(NPC character)
     {
-        System.Console.WriteLine("Exiting decision state.");
+        System.Console.WriteLine(character.name + " Exiting decision state.");
     }
 
 

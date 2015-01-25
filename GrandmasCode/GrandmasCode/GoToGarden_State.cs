@@ -18,6 +18,7 @@ public class GoToGarden_State : _State
     void _State.enter(NPC character)
     {
         System.Console.WriteLine(character.name + "is going to the Garden");
+        character.isWalking = true;
     }
 
     void _State.execute(NPC character)
@@ -28,9 +29,13 @@ public class GoToGarden_State : _State
         {
             character.ChangeState(GoToSleep_State.getInstance());
         }
-        else
+        else if (!character.isWalking && GardenRoom.getInstance().canEnter())
         {
             character.ChangeState(Garden_State.getInstance());
+        }
+        else if (!character.isWalking && !GardenRoom.getInstance().canEnter())
+        {
+            character.ChangeState(Decision_State.getInstance());
         }
     }
 
