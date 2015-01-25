@@ -16,14 +16,14 @@ namespace GrandmasCode
         {
             this.name = inName;
             this.vit = (int)Constants.STARTING_VIT;
-            this.curr_state = null;
-            this.thresholds = null;
+            this.curr_state = Sleep_State.getInstance();
+            this.thresholds = new Threshold(20, 80, 20, 80, 20, 80,20 ,80, 20 , 80, 20, 80);
         }
 
 
         public void Update()
         {
-
+            this.curr_state.execute(this);
         }
 
 

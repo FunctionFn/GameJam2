@@ -10,6 +10,13 @@ namespace GrandmasCode
     {
         static void Main(string[] args)
         {
+            NPC npc = new NPC("Joe");
+
+            while (true)
+            {
+                World.getInstance().update();
+                npc.Update();
+            }
             //_State myState = new Decision_State().get;
 
             //NPC joe = new NPC("joe");
