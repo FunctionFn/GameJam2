@@ -19,14 +19,17 @@ class GoToSleep_State: _State
     void _State.enter(NPC character)
     {
         System.Console.WriteLine(character.name + "is going to sleep");
+        character.isWalking = true;
     }
 
     void _State.execute(NPC character)
     {
         // BasicPath.move(room)
         System.Console.WriteLine(character.name + ": 8:30 already?  way past my bedtime");
-            
-        character.ChangeState(Sleep_State.getInstance());
+        if (!character.isWalking)
+        {
+            character.ChangeState(Sleep_State.getInstance());
+        }
   
     }
 

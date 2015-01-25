@@ -18,6 +18,8 @@ public class Kitchen_State : _State
     void _State.enter(NPC character)
     {
         System.Console.WriteLine(character.name + " entering the kitchen");
+        character.curr_room.leave();
+        character.curr_room = KitchenRoom.getInstance().enter();
     }
 
     void _State.execute(NPC character)

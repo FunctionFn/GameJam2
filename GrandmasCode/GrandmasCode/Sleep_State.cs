@@ -21,6 +21,8 @@ public class Sleep_State : _State
     void _State.enter(NPC character)
     {
         System.Console.WriteLine(character.name + " enters Sleep state");
+        character.curr_room.leave();
+        character.curr_room = BedroomRoom.getInstance().enter();
     }
 
     void _State.execute(NPC character)
