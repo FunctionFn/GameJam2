@@ -15,6 +15,8 @@ public class ElderlyBase : MonoBehaviour {
 
 	public int behaviorState;
 	public float travelTime;
+	public float xRand;
+	public float yRand;
 
 	public Vector3 neutralLoc;
 	public Vector3[] pathbn;
@@ -75,6 +77,7 @@ public class ElderlyBase : MonoBehaviour {
 
 	public void MoveTo(Vector3 target)
 	{
+
 		iTween.MoveTo(gameObject, iTween.Hash ("position", target,
 		                                      "easetype", iTween.EaseType.linear,
 		                                      "time", travelTime,
